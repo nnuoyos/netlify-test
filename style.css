@@ -30,6 +30,19 @@ body {
     background-color: #fff;
     z-index: 9999999;
 }
+.icon_fix{
+    position: fixed;
+    right: 15px;
+    bottom: 50px;
+    z-index: 3;
+    
+}
+.icon_fix img{
+    
+    border-radius: 50%;
+    box-shadow: rgb(50 50 93 / 25%) 9px 10px 13px 4px, rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+    width: 80px;
+}
 .navbar {
     margin: 0 auto;
     margin: 12px 10px;
@@ -193,20 +206,16 @@ body {
 #main01 ul {
     transition: all 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
 }
-
 .main01_inner .main01_img img {
-    /* position: relative; */
-    /* width: 28%; */
-    width: 420px;
+    width: 375px;
 }
 .main01_text_box {
     position: relative;
     z-index: 0;
     width: 100%;
-    /* margin-right: -10px; */
     bottom: 48%;
     color: #fff;
-    left: 2%;
+    left: 4%;
 }
 .main01_text_box h1 {
     font-size: 26px;
@@ -769,6 +778,18 @@ li {
 .banner_box img{
     width: 100%;
 }
+.banner_item{
+    overflow: hidden;
+}
+.banner_item:hover .banner_local{
+    top: -60px;
+}
+.banner_item img{
+    transition: all 0.7s linear;
+}
+.banner_item img:hover{
+    transform: scale(1.4);
+}
 .banner_box li{
     position: relative;
     margin: -3px;
@@ -780,11 +801,16 @@ li {
     color: #fff;
 }
 .banner_local{
+    position: absolute;
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 500;
+    top: 0px;
+    transition: all 0.4s;
 }
-.hotel_link{
+.hotel_link_text a{
+    position: relative;
+    top: 40px;
     font-size: 12px;
     letter-spacing: -0.1px;
     font-weight: 600;
@@ -895,8 +921,8 @@ li {
 .option_address{
     position: absolute;
     overflow: hidden;
-    width: 90%;
-    height: 100%;
+    width: 92%;
+    height: 107%;
     font-size: 14px;
     color: #4b4b4b;
     letter-spacing: -0.5px;
@@ -907,7 +933,125 @@ li {
  .option_address .address{
     margin-bottom: 5px;
  }
-
+/* footer */
+#footer{
+    position: absolute;
+    width: 375px;
+    height: 700px;
+    margin-top: 30px;
+}
+.footer_inner{
+    position: relative;
+}
+.news_letter{
+    position: relative;
+    width: 100%;
+    height: 155px;
+    background-color: #6462622e;
+}
+.news_letter img{
+    width: 110px;
+}
+.news_letter_inner{
+    position: absolute;
+    margin: 10px 20px 0px 20px;
+}
+.news_letter p{
+    width: 305px;
+    font-size: 13px;
+    margin-top: 10px;
+    color:#777;
+}
+input{
+    width: 260px;
+    height: 20px;
+    background-color: #fff;
+    margin-right: 3px;
+    margin-top: 10px;
+    padding: 4px;
+    outline: none;
+}
+input::placeholder{
+    color: #777;
+    font-size: 11px;
+}
+.letter_box button{
+    background-color: #4b4b4b;
+    width: 58px;
+    height: 28px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    background-color: #4b4b4b;
+}
+.footer_bar{
+    position: relative;
+    color:rgba(153, 153, 153, 0.603);
+    background-color: #333;
+    width: 100%;
+}
+.footer_bar_inner{
+    position: relative;
+    padding: 20px;
+    font-size: 14px;
+}
+.point{
+    font-weight: 600;
+    color: #fff;
+}
+.information{
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #aaa;  
+}
+.information :nth-child(1){
+    margin-bottom: 12px;
+}
+.information :nth-child(2){
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+.information :nth-child(2) a{
+    margin-right: 15px;
+}
+.address_box{
+    color: #948f85;
+    font-size: 13px;
+    border-bottom: 1px solid #948f85;
+}
+.address_box li{
+    margin-bottom: 12px;
+}
+/* hotel & resort logo */
+.footer_logo01{
+    border-bottom: 1px solid #969085;
+}
+.footer_logo01 p{
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer_logo01 li{
+    margin-bottom: 10px;
+}
+.footer_logo01 img{
+    width: 80%;
+}
+/* family site logo*/
+.footer_logo02{
+    border-bottom: 1px solid #969085;
+}
+.footer_logo02 p{
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footer_logo02 ul{
+    width: 320px;
+}
+.footer_logo02 li{
+    margin-bottom: 10px;
+}
 /* 태블릿 아이패드 air */
 @media all and (min-width: 768px) {
     body {

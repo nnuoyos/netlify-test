@@ -120,6 +120,7 @@ function onClickSelect(e) {
   $(function () {
     let address = $('.option_list li a');
     let addressPanel = $('.option_address');
+    let mapImg = $('.map_box > div');
     address.click(function (e) {
         e.preventDefault(); //링크의 기본 속성 막아놓기
         //내가 클릭한 탭에만 active 부여하기
@@ -132,21 +133,21 @@ function onClickSelect(e) {
 });
 
 /* kakao map API */
-var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-var options = { //지도를 생성할 때 필요한 기본 옵션
+let container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
+let options = { //지도를 생성할 때 필요한 기본 옵션
+   /*  if(){
+    active에 해당하는 지역의 주소를 띄워주기 => 아직 구현 못함
+    } */
 	center: new kakao.maps.LatLng(37.466390317686354, 127.03279034552385), //지도의 중심좌표.
 	level: 3 //지도의 레벨(확대, 축소 정도)
 };
-var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
 // 마커가 표시될 위치입니다
-var markerPosition  = new kakao.maps.LatLng(37.466390317686354, 127.03279034552385);
+let markerPosition  = new kakao.maps.LatLng(37.466390317686354, 127.03279034552385);
 // 마커를 생성합니다
-var marker = new kakao.maps.Marker({
+let marker = new kakao.maps.Marker({
     position: markerPosition
 });
-
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
 
-// 아래 코드는 지도 위의 마커를 제거하는 코드입니다
-// marker.setMap(null);  
