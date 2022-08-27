@@ -868,13 +868,13 @@ li {
 .select .option_list .option:hover {
     background-color:  #f2f2f2;
 }
-#map{
+/* #map{
     position: absolute;
     width: 100%;
     height: 400px;
     background-color: thistle;
     margin-bottom: 20px;
-}
+} */
  .location_info{
     position: relative;
     width: 375px;
