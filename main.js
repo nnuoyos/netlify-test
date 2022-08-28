@@ -17,12 +17,11 @@ toggleBtn.addEventListener('click', (event) => {
 let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
 let sliderContainer = document.querySelector('#slide'); //ul
 let slides = document.querySelectorAll('.main_slide'); //li
-let totalSlides = slides.length; //슬라이드 (li) 개수
+let totalSlides = slides.length; //슬라이드 (li) 길이
 let slideIndex = 0;
 let sliderWidth = sliderWrapper.clientWidth; //container의 width
 sliderContainer.style.width = sliderWidth * totalSlides + 'px';
 showSlides(); //페이지 열자마자 움직이고 있게 함수 먼저 부르기
-
 //자동 슬라이드 함수
 function showSlides() {
     for (let i = 0; i < totalSlides; i++) {
@@ -36,6 +35,30 @@ function showSlides() {
 }
 
 /* pagination promotion*/
+let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
+let slide = document.querySelector('#promotion_ul'); //ul 슬라이드 전체 width 구하기
+let slideItem = document.querySelectorAll('.slide_img_box') //li
+let maxSlide = slideItem.length; //슬라이드 길이
+let currSlide = 0; //현재 슬라이드 위치
+let slideWidth  = promoWrapper.clientWidth; //promotion_container의 width
+let paginationItems = document.querySelectorAll('.slide_pagination > li');
+slide.style.width = slideWidth * maxSlide + 'px';
+promotionSlides();
+
+function promotionSlides() {
+    for (let i = 0; i < maxSlide; i++) {
+        slide.style.transition = '.3s';
+        slide.style.left = -(310 * currSlide) + 'px';
+    }
+    currSlide++;
+    if (currSlide === maxSlide) {
+        currSlide = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
+    }setTimeout(promotionSlides, 3500);
+    // 슬라이드 이동 시 현재 활성화된 pagination 변경
+    paginationItems.forEach((i) => i.classList.remove("active"));
+    paginationItems[currSlide-1].classList.add("active");
+}
+/* paging button click */
 $(function () {
     let container = $('#promotion_ul');
     let pagination = $('#promotion_list > li');
@@ -52,7 +75,32 @@ $(function () {
         container.animate({ left: -310 * nowIndex });
     });
 });
+
 /* pagination package */
+let PromotionWrapper = document.querySelector('.package_container'); //최상위 요소
+let slidePromo = document.querySelector('#package_ul'); //ul 슬라이드 전체 width 구하기
+let slideItemPromo = document.querySelectorAll('.slide_img_box_main03') //li
+let maxSlidePromo = slideItem.length; //슬라이드 길이
+let currSlidePromo = 0; //현재 슬라이드 위치
+let slideWidthPromo  = promoWrapper.clientWidth; //promotion_container의 width
+let paginationItemsPromo = document.querySelectorAll('#package_list > li');
+slidePromo.style.width = slideWidthPromo * maxSlidePromo + 'px';
+packageSlides();
+
+function packageSlides() {
+    for (let i = 0; i < maxSlidePromo; i++) {
+        slidePromo.style.transition = '.3s';
+        slidePromo.style.left = -(310 * currSlide) + 'px';
+    }
+    currSlidePromo++;
+    if (currSlidePromo === maxSlidePromo) {
+        currSlidePromo = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
+    }setTimeout(packageSlides, 3500);
+    // 슬라이드 이동 시 현재 활성화된 pagination 변경
+    paginationItemsPromo.forEach((i) => i.classList.remove("active"));
+    paginationItemsPromo[currSlidePromo-1].classList.add("active");
+}
+/* paging button click */
 $(function () {
     let container = $('#package_ul');
     let pagination = $('#package_list > li');
@@ -71,25 +119,34 @@ $(function () {
 
 /* tab menu */
 //페이지 들어가자마자 첫번째 화면 보이도록 구현 다시 하기
+
 $(function () {
+    let tabList = $('.tabs_nav li');
     let tabAnchor = $('.tabs_nav li a');
     let tabPanel = $('.tabs_panel');
+    let tabIndex = 0;
 
     //링크를 클릭하면 할 일
     tabAnchor.click(function (e) {
         e.preventDefault(); //링크의 기본 속성 막아놓기
+        tabIndex = tabList.index(this);
         //내가 클릭한 탭에만 active 부여하기
+
         tabAnchor.removeClass('active'); //액티브 모두 제거
         $(this).addClass('active'); //클릭이벤트가 발생한 그 요소에만 액티브 추가
         tabPanel.hide();
-        /* 어트리뷰트 불러오기 */
+        //어트리뷰트 불러오기
         //let c = A.attr('href'); c라는 변수에 a링크 가져오기
         let $target = $(this).attr('href');
-
         //유저가 보고싶은 해당 탭은 target에 저장되어 있다 show로 보여주기
         $($target).show();
     });
 });
+
+/* overview slide */
+
+
+
 
 /* LOCATION drop down menu */
 //active 추가 되었을 경우에만 list 보이게 하기

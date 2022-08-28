@@ -321,7 +321,7 @@ body {
 }
 .slide_pagination {
     display: flex;
-    gap: 0px;
+    gap: 3px;
     margin-top: 5%;
     justify-content: center;
 }
