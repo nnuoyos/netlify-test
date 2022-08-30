@@ -1067,8 +1067,7 @@ input::placeholder{
         width: 96%;
         align-items: center;
         margin: 35px 14px;
-        background-color: pink;
-        /* background-color: #fff; */
+        background-color: #fff;
         z-index: 9999999;
     }
     .navbar {
@@ -1077,8 +1076,7 @@ input::placeholder{
         height: 57px;
         justify-content: space-between;
         display: flex;
-        background-color: beige;
-        /* background-color: var(--background-color); */
+        background-color: var(--background-color);
     }
     .navbar_logo h1 {
         margin-left: 8px;
@@ -1091,68 +1089,51 @@ input::placeholder{
         overflow: hidden;
     }
     .login{
-        margin-right: -40px;
+        margin-left: -70px;
     }
     .reservation_lookup{
-        margin-right: -60px;
+        margin-left: -40px;
     }
     .reservation{
-        border: 1px solid rgb(149, 119, 95);
-        padding: 10px 34px;
+        border: 2px solid rgb(149, 119, 95);
+        padding: 9px 34px;
         color: rgb(149, 119, 95);
-        margin-right: -23px;
+        margin-right: -150px;
     }
     .search_hotel {
         background-color: rgb(149, 119, 95);
         padding: 11px 28px;
-        right: 55px;
+        right: -72px;
         font-size: 12px;
         color: #fff;
         font-weight: 500;
     }
-    #navbar >ul > li{
+    .navbar_lang > li{
         float:left;
-		width:140px;
-		position:relative;
+        padding: 8px 10px;
         flex-direction: column;
-        border: 1px solid black;
-    } 
-    #navbar >ul > li > ul{
-        width:130px;
-		display:none;
-		position: absolute;
-		font-size:14px;
-		background: skyblue;
-    }
-    #navbar >ul > li > ul
-    #navbar >ul > li > ul > li:hover{
-        background: orange;
-		transition: ease 1s;
-    }
-   /*  .navbar_lang{
-        position: absolute;
-        right: 0px;
-        display: flex;
-        overflow: hidden;
-        top: 9px;
-        background-color: wheat;
+        border: 1px solid rgb(149, 119, 95);
+        color: rgb(149, 119, 95);
         text-align: center;
-    } */
-    /* .navbar_lang li{
-		position:relative;
-        float:left;
-        width: 45px;
-        border: 1px solid black;
-    } */
+    } 
     .navbar_lang > li > ul{
-		position: absolute;
-        width:130px;
-		display:none;
-		font-size:14px;
-		background: skyblue;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        display:none;
+        font-size:14px;
+        background-color: #fff;
     }
     .navbar_lang > li:hover > ul{
         display: block;
+    }
+    .navbar_lang > li > ul > li{
+        position: relative;
+        padding: 9px 11px;
+    }
+    .navbar_lang > li > ul > li:hover{
+        background: rgb(149, 119, 95, 0.3);
+		transition: ease 1s;
     }
     /* main */
     #main {
