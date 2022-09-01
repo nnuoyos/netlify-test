@@ -1,4 +1,4 @@
-/* header 상단 toggle button */
+/* header 모바일 상단 toggle button */
 //변수 지정
 const toggleBtn = document.querySelector('.navbar_toggle_button');
 const menu = document.querySelector('.navbar_menu');
@@ -12,6 +12,20 @@ toggleBtn.addEventListener('click', (event) => {
     event.currentTarget.classList.toggle('active-1');
 });
 
+/* header 태블릿 상단 호텔찾기 toggle */
+const hotelSearchBtn = document.querySelector('.search_hotel');
+const toggleTarget = document.querySelector('.hotel_search_container');
+const closeBtn = document.querySelector('.close_button');
+
+$('.search_hotel').click(function(event){
+    event.stopPropagation(); //부모태그로의 이벤트 stop
+    $('.hotel_search_container').slideToggle();
+});
+$('.close_button').click(function(){
+    $('.hotel_search_container').slideToggle();
+})
+
+
 /* main slide*/
 //변수 지정
 let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
@@ -23,6 +37,15 @@ let sliderWidth = sliderWrapper.clientWidth; //container의 width
 sliderContainer.style.width = sliderWidth * totalSlides + 'px';
 showSlides(); //페이지 열자마자 움직이고 있게 함수 먼저 부르기
 //자동 슬라이드 함수
+/* $('.container').hide();
+$('.container > ul > li:first-child').show();
+setInterval(function(){
+    $('.container > ul > li:first-child').fadeOut()
+    .next().fadeIn().end(1000)
+    .appendTo('.container > ul');
+
+},3000); */
+
 function showSlides() {
     for (let i = 0; i < totalSlides; i++) {
         sliderContainer.style.left = -(sliderWidth * slideIndex) + 'px';

@@ -18,8 +18,72 @@ body {
     position: fixed;
     top: 0;
     z-index: 10;
-    /* left: 0px;
-    right: 0px; */
+}
+.hotel_search_container{
+    display: none;
+}
+.close_button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.hotel_search_container{
+    /* position: relative; */
+    width: 375px;
+    height: 667px;
+    background-color: rgba(235, 229, 221);
+    z-index: 10;
+    overflow: scroll;
+}
+.hotel_search_container ul{
+    position: relative;
+    width: 87%;
+    top: 77px;
+    margin: 0 auto;
+    flex-direction: column;
+}
+.hotel_search_container ul li{
+    position: relative;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 0px;
+    background-color: #000;
+}
+.layer{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+}
+.hotel_search_title{
+    position: absolute;
+    top: 30px;
+    left: 40%;
+    font-size: 19px;
+}
+.hotel_search_container ul li img{
+    width: 100%;
+}
+.hotel_search_container ul li p{
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
+}
+.hotel_search_container ul li:nth-child(1) p,
+.hotel_search_container ul li:nth-child(2) p{
+    position: absolute;
+    top: 45%;
+    left: 28%;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 19px;
 }
 /* navbar */
 .navbar_box {
@@ -132,6 +196,10 @@ body {
 .navbar_menu.active,
 .navbar_language.active {
     display: flex;
+}
+.reservation_lookup, .reservation,
+.login, .navbar_lang{
+    display: none;
 }
 /* menu_box */
 .menu_box {
@@ -273,7 +341,6 @@ body {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    width: 100%;
 }
 .slide_box img {
     width: 290px;
@@ -320,6 +387,7 @@ body {
     font-weight: 500;
 }
 .slide_pagination {
+    display: block;
     display: flex;
     gap: 3px;
     margin-top: 5%;
@@ -1062,6 +1130,77 @@ input::placeholder{
         top: 0;
         z-index: 10;
     }
+    .reservation_lookup, .reservation,
+    .login, .navbar_lang{
+    display: block;
+}
+    .close_button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+    }
+    .hotel_search_container{
+        position: relative;
+        width: 768px;
+        height: 177px;
+        background-color: rgba(235, 229, 221, 0.6);
+    }
+    .hotel_search_container ul{
+        position: relative;
+        width: 95%;
+        top: 20px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction:row;
+    }
+    .hotel_search_container ul li{
+        position: relative;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+        font-size: 0px;
+        /* background-color: #000; */
+    }
+    .layer{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100%;
+    }
+    .hotel_search_container ul li img{
+        width: 100%;
+    }
+    .hotel_search_container ul li p{
+        position: absolute;
+        width: 127px;
+        top: 30%;
+        left: 12%;
+        text-align: center;
+        color: #fff;
+        font-size: 19px;
+    }
+    .hotel_search_container ul li:nth-child(1) p,
+    .hotel_search_container ul li:nth-child(2) p{
+        width: 160px;
+        position: absolute;
+        top: 40%;
+        left: 2%;
+        transform: translateY(-50%,-50%);
+        text-align: center;
+        color: #fff;
+        font-size: 19px;
+    }
+    /* toggle */
+    .hotel_search_container{
+        display: none;
+    }
+    .hotel_search_container.on{
+        display: block;
+    }
+    .hotel_search_title{
+        display: none;
+    }
     /* navbar */
     .navbar_box {
         width: 96%;
@@ -1191,12 +1330,6 @@ input::placeholder{
         top: -84px;
         font-family: 'KHNPHD', sans-serif;
     }
-/*     .main01_text {
-        position: absolute;
-        top: 110px;
-        font-size: 14px;
-        font-weight: 500;
-    } */
     .text02 {
         margin-bottom: 10px;
     }
@@ -1213,6 +1346,178 @@ input::placeholder{
         background-color: #444;
         color: #fff;
         font-weight: 600;
+    }
+    /* main02 */
+    #main02 {
+        position: relative;
+        width: 100%;
+        height: 510px;
+        background-color: rgba(251, 251, 251, 0.884);
+    }
+    .main02_inner {
+        position: relative;
+        height: 0px;
+        background-color: rgb(251, 251, 251, 3.9);
+    }
+    .promotion{
+        position: absolute;
+        margin-top: 80px;
+    }
+    #promotion_list{
+        display: none;
+    }
+    .promotion_box {
+        position: absolute;
+        width: 333px;
+        height: 284px;
+        /* background-color: #948f85; */
+        background-color: rgb(251, 251, 251, 3.9);
+        z-index: 5;
+        padding: 30px;
+    }
+    .promotion_box h1 {
+        font-size: 38px;
+        margin-left: 20px;
+        letter-spacing: 0.3em;
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .promotion_box p {
+        margin-left: 22px;
+        height: 45px;
+        font-size: 23px;
+        line-height: 34px;
+        text-align: left;
+        color: rgba(184, 146, 111, 0.884)
+    }
+    .promotion_container{
+        position: relative;
+        height: 350px;
+    }
+    .promotion_button{
+        position: absolute;
+        bottom: 15px;
+        left: 240px;
+    }
+    .promotion_button::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #b6b6b6;
+        box-sizing: border-box;
+    }
+    .promotion_button .prev_button{
+        position: relative;
+        border: 1px solid #b6b6b6;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 6;
+        line-height: 1;
+        width: 60px;
+        height: 60px;
+    }
+    .promotion_button .prev_button a::after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 11px;
+        height: 11px;
+        margin-top: 2px;
+        margin-left: 7px;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        transform: rotate(135deg);
+    }
+    .promotion_button .next_button{
+        position: absolute;
+        border: 1px solid #b6b6b6;
+        margin-left: 10px;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 6;
+        line-height: 1;
+        width: 60px;
+        height: 60px;
+    }
+    .promotion_button .next_button a::after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 11px;
+        height: 11px;
+        margin-top: 2px;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        transform: rotate(315deg);
+    }
+    /* .promotion_button::before{
+        position: absolute;
+        content: '';
+        display: inline-block;
+        box-sizing: border-box;
+        border-bottom: 1px solid #b6b6b6;
+        border-top: 1px solid #b6b6b6;
+        border-right: 4px solid #b6b6b6;
+    } */
+    /* .promotion_button .prev_button::before{
+        
+        border-left: 4px solid #b6b6b6;
+        transform: rotate(45deg);
+        margin-left: 2px;
+    } */
+    /* .promotion_button .next_button::before{
+        content: '';
+        display: inline-block;
+        border-bottom: 2px solid #b6b6b6;
+        box-sizing: border-box;
+    } */
+    .slide_box {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        margin-left: 390px;
+    }
+    .slide_img {
+        height: auto;
+    }
+    .main02_slide_textbox {
+        height: 70px;
+        background-color: #fff;
+        padding: 20px;
+        text-align: left;
+    }
+    .slide_box .slide_img_box {
+        border-top: 2px solid #555555;
+        margin-left: 20px;
+    }
+    .text_title {
+        width: 250px;
+        margin-bottom: 10px;
+        color: #444;
+        font-size: 17px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    .text_date {
+        color: #777;
+        font-size: 14px;
+    }
+    .local {
+        position: relative;
+        width: 47px;
+        font-size: 13px;
+        margin-top: 23px;
+        padding: 2px 0px;
+        margin-left: -8px;
+        border: 1px solid rgb(34, 42, 79);
+        background-color: rgb(34, 42, 79);
+        text-align: center;
+        color: #fff;
+        font-weight: 500;
     }
 }
 /* 데스크탑 */
