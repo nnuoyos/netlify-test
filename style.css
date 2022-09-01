@@ -98,7 +98,7 @@ body {
     position: fixed;
     right: 15px;
     bottom: 50px;
-    z-index: 3;
+    z-index: 5;
 }
 .icon_fix img{
     border-radius: 50%;
@@ -267,10 +267,9 @@ body {
     width: 100%;
     height: 100%;
 }
-/* 슬라이드 속도 */
-#main01 ul {
-    transition: all 0.3s cubic-bezier(0.25, 0.25, 0.75, 0.75);
-}
+/* #main01 ul {
+    transition: all 0.5s cubic-bezier(0.25, 0.25, 0.75, 0.75);
+} */
 .main_slide_tablet{
     display: none;
 }
@@ -1274,6 +1273,9 @@ input::placeholder{
         background: rgb(149, 119, 95, 0.3);
 		transition: ease 1s;
     }
+    .icon_fix{
+        display: none;
+    }
     /* main */
     #main {
         position: relative;
@@ -1333,7 +1335,6 @@ input::placeholder{
     .text02 {
         margin-bottom: 10px;
     }
-    
     .toggle_button_box{
         display: none;
     }
@@ -1356,11 +1357,10 @@ input::placeholder{
     }
     .main02_inner {
         position: relative;
-        height: 0px;
-        background-color: rgb(251, 251, 251, 3.9);
     }
     .promotion{
         position: absolute;
+        width: 100%;
         margin-top: 80px;
     }
     #promotion_list{
@@ -1370,7 +1370,6 @@ input::placeholder{
         position: absolute;
         width: 333px;
         height: 284px;
-        /* background-color: #948f85; */
         background-color: rgb(251, 251, 251, 3.9);
         z-index: 5;
         padding: 30px;
@@ -1452,27 +1451,6 @@ input::placeholder{
         border-bottom: 1px solid #999;
         transform: rotate(315deg);
     }
-    /* .promotion_button::before{
-        position: absolute;
-        content: '';
-        display: inline-block;
-        box-sizing: border-box;
-        border-bottom: 1px solid #b6b6b6;
-        border-top: 1px solid #b6b6b6;
-        border-right: 4px solid #b6b6b6;
-    } */
-    /* .promotion_button .prev_button::before{
-        
-        border-left: 4px solid #b6b6b6;
-        transform: rotate(45deg);
-        margin-left: 2px;
-    } */
-    /* .promotion_button .next_button::before{
-        content: '';
-        display: inline-block;
-        border-bottom: 2px solid #b6b6b6;
-        box-sizing: border-box;
-    } */
     .slide_box {
         position: absolute;
         width: 100%;
@@ -1518,6 +1496,111 @@ input::placeholder{
         text-align: center;
         color: #fff;
         font-weight: 500;
+    }
+    /* main03 */
+    #main03 {
+        position: relative;
+        width: 100%;
+        height: 510px;
+        background-color: #fff
+    }
+    .main03_inner {
+        position: relative;
+        margin-top: 80px;
+    }
+    .package{
+        position: absolute;
+    }
+    #package_list{
+        display: none;
+    }
+    .package_box {
+        position: absolute;
+        width: 333px;
+        height: 284px;
+        margin-left: 376px;
+        top: -32px;
+        background-color: #fff;
+        z-index: 5;
+        padding: 0px 30px 60px 30px;
+    }
+    .package_box h1 {
+        font-size: 38px;
+        margin-left: -23px;
+        letter-spacing: 0.3em;
+        margin-bottom: 10px;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .package_box p {
+        width: 261px;
+        margin-left: 22px;
+        height: 45px;
+        font-size: 23px;
+        line-height: 34px;
+        text-align: left;
+        color: rgba(184, 146, 111, 0.884)
+    }
+    .package_container{
+        position: relative;
+        height: 350px;
+    }
+    .package_button{
+        position: absolute;
+        bottom: 15px;
+        left: 404px;
+    }
+    .package_button::before{
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-bottom: 2px solid #b6b6b6;
+        box-sizing: border-box;
+    }
+    .package_button .prev_button_package{
+        position: relative;
+        border: 1px solid #b6b6b6;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 6;
+        line-height: 1;
+        width: 60px;
+        height: 60px;
+    }
+    .package_button .prev_button_package a::after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 11px;
+        height: 11px;
+        margin-top: 2px;
+        margin-left: 7px;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        transform: rotate(135deg);
+    }
+    .package_button .next_button_package{
+        position: absolute;
+        border: 1px solid #b6b6b6;
+        margin-left: 10px;
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 6;
+        line-height: 1;
+        width: 60px;
+        height: 60px;
+    }
+    .package_button .next_button_package a::after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        width: 11px;
+        height: 11px;
+        margin-top: 2px;
+        border-right: 1px solid #999;
+        border-bottom: 1px solid #999;
+        transform: rotate(315deg);
     }
 }
 /* 데스크탑 */

@@ -28,7 +28,7 @@ $('.close_button').click(function(){
 
 /* main slide*/
 //변수 지정
-let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
+/* let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
 let sliderContainer = document.querySelector('#slide'); //ul
 let slides = document.querySelectorAll('.main_slide'); //li
 let totalSlides = slides.length; //슬라이드 (li) 길이
@@ -36,15 +36,6 @@ let slideIndex = 0;
 let sliderWidth = sliderWrapper.clientWidth; //container의 width
 sliderContainer.style.width = sliderWidth * totalSlides + 'px';
 showSlides(); //페이지 열자마자 움직이고 있게 함수 먼저 부르기
-//자동 슬라이드 함수
-/* $('.container').hide();
-$('.container > ul > li:first-child').show();
-setInterval(function(){
-    $('.container > ul > li:first-child').fadeOut()
-    .next().fadeIn().end(1000)
-    .appendTo('.container > ul');
-
-},3000); */
 
 function showSlides() {
     for (let i = 0; i < totalSlides; i++) {
@@ -55,7 +46,18 @@ function showSlides() {
         slideIndex = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
     }
     setTimeout(showSlides, 3500);
-}
+} */
+
+//fadeIn fadeOut
+$('.container>ul>li').hide();
+$('.container>ul>li:first-child').show();
+
+setInterval(function(){
+    $('.container>ul>li:first-child').fadeOut(1000)
+    .next(500).fadeIn(1000).end(500)
+    .appendTo('.container > ul');
+},4000);
+
 
 /* pagination promotion*/
 let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
