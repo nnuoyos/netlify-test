@@ -26,7 +26,7 @@ $('.close_button').click(function(){
 })
 
 
-/* main slide*/
+/* main slide 옆으로 넘어가는 슬라이드*/
 //변수 지정
 /* let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
 let sliderContainer = document.querySelector('#slide'); //ul
@@ -48,7 +48,7 @@ function showSlides() {
     setTimeout(showSlides, 3500);
 } */
 
-//fadeIn fadeOut
+/* fadeIn fadeOut 사라지고 들어오는 슬라이드*/
 $('.container>ul>li').hide();
 $('.container>ul>li:first-child').show();
 
@@ -59,29 +59,35 @@ setInterval(function(){
 },4000);
 
 
-/* pagination promotion*/
+/* promotion */
 let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
-let slide = document.querySelector('#promotion_ul'); //ul 슬라이드 전체 width 구하기
+let slide = document.querySelector('#promotion_ul'); //ul
 let slideItem = document.querySelectorAll('.slide_img_box') //li
-let maxSlide = slideItem.length; //슬라이드 길이
-let currSlide = 0; //현재 슬라이드 위치
+let maxSlide = slideItem.length; //슬라이드(li) 길이
+let currSlideIndex = 0; //현재 슬라이드 위치 (인덱스)
 let slideWidth  = promoWrapper.clientWidth; //promotion_container의 width
 let paginationItems = document.querySelectorAll('.slide_pagination > li');
-slide.style.width = slideWidth * maxSlide + 'px';
-promotionSlides();
+const slideItemWidth = 310; // 슬라이드 한 개의 넓이 290px, 마진 20 이동시킬 넓이 : 310px
+slide.style.width = slideWidth * maxSlide + 'px'; //전체 슬라이드 컨테이너 넓이 설정
+const slideMargin = 20; //슬라이드 사이의 마진 값 20px
+const prevButton = document.querySelector('.prev_button');
+const nextButton = document.querySelector('.next_button');
 
-function promotionSlides() {
+promotionAutoSlides();
+
+/* 자동 슬라이드 */
+function promotionAutoSlides() {
     for (let i = 0; i < maxSlide; i++) {
         slide.style.transition = '.3s';
-        slide.style.left = -(310 * currSlide) + 'px';
+        slide.style.left = -(310 * currSlideIndex) + 'px';
     }
-    currSlide++;
-    if (currSlide === maxSlide) {
-        currSlide = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
-    }setTimeout(promotionSlides, 3500);
+    currSlideIndex++;
+    if (currSlideIndex === maxSlide) {
+        currSlideIndex = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
+    }setTimeout(promotionAutoSlides, 3500);
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
-    paginationItems[currSlide-1].classList.add("active");
+    paginationItems[currSlideIndex-1].classList.add("active");
 }
 /* paging button click */
 $(function () {
@@ -101,29 +107,29 @@ $(function () {
     });
 });
 
-/* pagination package */
-let PromotionWrapper = document.querySelector('.package_container'); //최상위 요소
-let slidePromo = document.querySelector('#package_ul'); //ul 슬라이드 전체 width 구하기
-let slideItemPromo = document.querySelectorAll('.slide_img_box_main03') //li
-let maxSlidePromo = slideItem.length; //슬라이드 길이
-let currSlidePromo = 0; //현재 슬라이드 위치
-let slideWidthPromo  = promoWrapper.clientWidth; //promotion_container의 width
-let paginationItemsPromo = document.querySelectorAll('#package_list > li');
-slidePromo.style.width = slideWidthPromo * maxSlidePromo + 'px';
+/* package */
+let packageWrapper = document.querySelector('.package_container'); //최상위 요소
+let slidePackage = document.querySelector('#package_ul'); //ul 슬라이드 전체 width 구하기
+let slideItemPackage = document.querySelectorAll('.slide_img_box_main03') //li
+let maxSlidePackage = slideItemPackage.length; //슬라이드 길이
+let currSlidePackage = 0; //현재 슬라이드 위치
+let slideWidthPackage  = packageWrapper.clientWidth; //promotion_container의 width
+let paginationItemsPackage = document.querySelectorAll('#package_list > li');
+slidePackage.style.width = slideWidthPackage * maxSlidePackage + 'px';
 packageSlides();
 
 function packageSlides() {
-    for (let i = 0; i < maxSlidePromo; i++) {
-        slidePromo.style.transition = '.3s';
-        slidePromo.style.left = -(310 * currSlide) + 'px';
+    for (let i = 0; i < maxSlidePackage; i++) {
+        slidePackage.style.transition = '.3s';
+        slidePackage.style.left = -(310 * currSlidePackage) + 'px';
     }
-    currSlidePromo++;
-    if (currSlidePromo === maxSlidePromo) {
-        currSlidePromo = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
+    currSlidePackage++;
+    if (currSlidePackage === maxSlidePackage) {
+        currSlidePackage = 0; //현재페이지가 마지막이라면, 다시 첫화면으로 되돌리기
     }setTimeout(packageSlides, 3500);
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
-    paginationItemsPromo.forEach((i) => i.classList.remove("active"));
-    paginationItemsPromo[currSlidePromo-1].classList.add("active");
+    paginationItemsPackage.forEach((i) => i.classList.remove("active"));
+    paginationItemsPackage[currSlidePackage-1].classList.add("active");
 }
 /* paging button click */
 $(function () {
@@ -232,4 +238,3 @@ let marker = new kakao.maps.Marker({
 });
 // 마커가 지도 위에 표시되도록 설정합니다
 marker.setMap(map);
-
