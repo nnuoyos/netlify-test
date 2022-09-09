@@ -174,6 +174,21 @@ $(function () {
     });
 });
 
+
+/* 태블릿 사이즈 탭 메뉴 */
+/* function openCity(event, cityName){
+    let tabsButton = document.getElementsByClassName(".tab_box .tabs_nav li");
+    for(let i =0; i<tabsButton.length; i++){
+        tabsButton[i].style.display = "none";
+    }
+    let show = document.getElementsByClassName('.show');
+    for(let i=0; i<show.length; i++){
+        show[i].className = show[i].className.replace("active", "");
+    }
+    document.getElementById(cityName).style.display="block";
+    event.currentTarget.className += "active";
+} */
+
 /* overview slide */
 
 
