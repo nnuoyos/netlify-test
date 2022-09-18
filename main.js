@@ -175,22 +175,41 @@ $(function () {
 });
 
 
-/* 태블릿 사이즈 탭 메뉴 */
-/* function openCity(event, cityName){
-    let tabsButton = document.getElementsByClassName(".tab_box .tabs_nav li");
-    for(let i =0; i<tabsButton.length; i++){
-        tabsButton[i].style.display = "none";
-    }
-    let show = document.getElementsByClassName('.show');
-    for(let i=0; i<show.length; i++){
-        show[i].className = show[i].className.replace("active", "");
-    }
-    document.getElementById(cityName).style.display="block";
-    event.currentTarget.className += "active";
-} */
-
 /* overview slide */
 
+function slideOverview(){
+    const slideList = document.querySelector('.overview_list'); //ul
+    const slideContents = document.querySelectorAll('.slide_content'); //li
+    const slidePrevButton = document.querySelector('.prev_button');
+    const slideNextButton = document.querySelector('.next_button');
+    const slideLength = slideContents.length; //슬라이드 전체 길이
+    const slideWidth = 375;
+    const slideSpeed = 300;
+    const startNum = 0; 
+
+    //무한 반복 슬라이드
+    slideList.style.width = slideWidth * (slideLength + 2) + "px";
+    // Copy first and last slide
+    let firstChild = slideList.firstElementChild;
+    let lastChild = slideList.lastElementChild;
+    let clonedFirst = firstChild.cloneNode(true);
+    let clonedLast = lastChild.cloneNode(true);
+    // Add copied Slides
+    slideList.appendChild(clonedFirst);
+    slideList.insertBefore(clonedLast, slideList.firstElementChild);
+
+    let curIndex = startNum; //시작 인덱스
+    let curSlide = slideContents[curIndex];
+    curSlide.classList.add('slide_active');
+    //next button event
+    slideNextButton.addEventListener('click', function(){
+        if(curIndex <= slideLength - 1){
+            slideList.style.transition = slideSpeed + "ms";
+            slideList.style.transform = "translate3d(-" + (slideWidth)
+        }
+    })
+
+}
 
 
 
