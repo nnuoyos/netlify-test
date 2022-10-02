@@ -1591,7 +1591,7 @@ input::placeholder{
     .package_button{
         position: absolute;
         bottom: 15px;
-        left: 44px;
+        left: 420px;
     }
     .package_button::before{
         /* content: ''; */
@@ -1657,6 +1657,10 @@ input::placeholder{
         min-width: 320px;
         margin: 0 auto;
         height: 400px;
+    }
+    .todo_background{
+        width: 100%;
+        display: block;
     }
     .todo_background img{
         position: absolute;
@@ -1759,17 +1763,16 @@ input::placeholder{
     .tab_body .content > .content_inner {
         padding: 15px;
         position: absolute;
-        top: 146px;
-        height: 122px;
+        top: 173px;
+        height: 94px;
         width: 100%;
-        min-width: 320px;
         font-size: 10px;
         letter-spacing: -0.5px;
         background-color: rgb(3, 3, 3, 0.5);
     }
     .content_inner .title {
         margin-left: 20px;
-        font-size: 26px;
+        font-size: 20px;
         margin-bottom: 5px;
         font-weight: 400;
     }
@@ -1778,359 +1781,360 @@ input::placeholder{
         width: 265px;
         font-size: 16px;
     }
-/* main 05 OVER VIEW*/
-#main05 {
-    width: 768px;
-    height: 600px;
-    /* background-color: yellowgreen; */
-    margin-bottom: 50px;
-}
-.main05_inner {
-    position: relative;
-    width: 100%;
-    min-width: 320px;
-    margin: 0 auto;
-    height: 500px;
-}
-.main05_inner .overview_box {
-    position: absolute;
-    right: 5px;
-    top: -15px;
-    margin: 0 auto;
-    padding: 0px;
-    text-align: left;
-}
-.overview_box h1 {
-    font-size: 51px;
-    margin-bottom: 10px;
-    font-family: 'Poppins', sans-serif;
-}
-.overview_box p {
-    margin: 0 auto;
-    /* width: 236px;
-    height: 56px; */
-    font-size: 16px;
-    line-height: 33px;
-    color: #666;
-}
-.overview_main {
-    position: relative;
-    width: 768px;
-    height: 500px;
-    /* background-color: yellow; */
-}
-/* overview main photo */
-.overview_main .overview_list {
-    display: flex;
-    height: 216px;
-}
-.overview_main p{
-    font-size: 12px;
-    font-weight: 500;
-}
-.overview_main h3{
-    font-size: 14px;
-    font-weight: 500;
-}
-.overview_main .overview_list .overview_item01 {
-    position: relative;
-    width: 375px;
-    height: 100%;
-    /* overflow: hidden; */
-}
-.overview_list .overview_img01 {
-    width: 300px;
-}
-.overview_text01 {
-    position: relative;
-    color: #fff;
-    margin-left: 15px;
-    bottom: 50px;
-}
-.overview_list .overview_img01 img {
-    width: 100%;
-}
-.overview_top{
-    position: absolute;
-    right: 0px;
-    bottom: 0;
-    width: 300px;
-    height: 173px;
-}
-/* overview sub photo */
-.overview_bottom{
-    width: 375px;
-    height: 300px;
-}
-.overview_list02 {
-    position: relative;
-    flex-direction: column;
-    overflow: hidden;
-    width: 150px;
-    height: 250px;
-}
-.overview_list02 .overview_img02 {
-    width: 150px;
-    height: 250px;
-}
-.overview_list02 .overview_img02 img {
-    width: 100%;
-    height: 300px;
-}
-.overview_text02 {
-    position: relative;
-    color: #fff;
-    margin-left: 15px;
-    bottom: 60px;
-}
-.overview_list03 {
-    position: relative;
-    width: 150px;
-    height: 250px;
-    margin-left: 0;
-    display: flex;
-    overflow: hidden;
-}
-.overview_list03 .overview_img03 {
-    width: 150px;
-    height: 250px;
-}
-.overview_list03 .overview_img03 img {
-    width: 100%;
-    height: 300px;
-}
-.overview_text03 {
-    position: absolute;
-    color: #fff;
-    margin-left: 15px;
-    bottom: 15px;
-}
-.overview_list04{
-    position: absolute;
-    left: 150px;
-    top: 0;
-    width: 150px;
-    height: 500px;
-    display: flex;
-    overflow: hidden;
-}
-.overview_list04 .overview_img04 {
-    width: 150px;
-    height: 600px;
-}
-.overview_list04 .overview_img04 img {
-    width: 150px;
-    height: 600px;
-}
-.overview_list05{
-    position: absolute;
-    left: 300px;
-    top: 0px;
-    width: 150px;
-    height: 250px;
-    display: flex;
-    overflow: hidden;
-}
-.overview_list05 .overview_img05 {
-    width: 175px;
-    height: 250px;
-}
-.overview_list05 .overview_img05 img {
-    width: 100%;
-    height: 250px;
-}
-.overview_text05 {
-    position: relative;
-    color: #fff;
-    margin-left: 15px;
-    bottom: 60px;
-}
-.overview_list06{
-    position: absolute;
-    left: 300px;
-    top: 250px;
-    width: 150px;
-    height: 250px;
-    display: flex;
-    overflow: hidden;
-}
-.overview_list06 .overview_img06 {
-    width: 175px;
-    height: 250px;
-}
-.overview_list06 .overview_img06 img {
-    width: 100%;
-    height: 250px;
-}
-.overview_text06 {
-    position: relative;
-    color: #fff;
-    margin-left: 15px;
-    bottom: 60px;
-}
-/* over view button */
-.button_box{
-    position: relative;
-    bottom: -28px;
-    display: flex;
-    justify-content: end;
-    width: 100%;
-}
-.button_box img{
-    width: 50px;
-    height: 50px;
-}
-.button_box .prev_button{
-    position: absolute;
-    right: 252px;
-    bottom: 0px;
-}
-.button_box .next_button{
-    position: absolute;
-    right: 188px;
-    bottom: 0px;
-}
-/* #main 06 */
-#main06 {
-    width: 100%;
-    height: 890px;
-    margin-top: 50px;
-}
-.about_thek, .hotel_resort{
-    display: block;
-    font-size: 50px;
-}
-.about_title_m{
-    display: none;
-}
-.about_title{
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-}
-.banner_box{
-    position: relative;
-}
-.banner_list{
-    position: relative;
-    width: 746px;
-    height: 300px;
-    display: flex;
-    margin: 0 auto;
-}
-.banner_list li{
-    position: relative;
-    width: 250px;
-    height: 300px;
-    margin: 0px 5px;
-}
-.about_img01{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/about_01.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.about_img02{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/about_02.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.about_img03{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/about_03.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.about_img04{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background-image: url(./img/about_04.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.about_subtitle{
-    font-size: 23px;
-    margin-bottom: 13px;
-    font-weight: 500;
-}
-.main06_about_box button {
-    position: absolute;
-    right: 10px;
-    top: 253px;
-    width: 167px;
-    height: 35px;
-    background-color: #444;
-    color: #fff;
-    font-weight: 600;
-}
-.about_text{
-    width: 433px;
-    height: 224px;
-    font-size: 19px;
-    color: #666;
-    font-weight: 500;
-    margin-bottom: 10px;
-    line-height: 33px;
-}
-.hotel_link{
-    display: none;
-}
-.banner_local{
-    position: relative;
-    font-size: 32px;
-    font-weight: 400;
-    margin-top: 17%;
-    margin-left: 29px;
-    transition: all 0.4s;
-}
-.banner_item:hover .banner_local{
-    top: -90px;
-}
-.banner_list li:nth-child(3) .banner_local{
-    margin-top: 14%;
-    margin-left: 19px;
-}
-.banner_list li:nth-child(3):hover .banner_local{
-    top: -100px;
-}
-/* #main 07 */
-#main07{
-    margin-top: 50px;
-}
-.option_address{
-    width: 200px;
-    height: auto;
-    padding: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.location_address, .location_tel{
-    display: block;
-    color: rgb(204, 148, 74);
-}
-.location_address{
-    border-top: 1px solid rgb(185, 185, 185);
-    padding-top: 10px;
-}
-.location_info{
-    position: absolute;
-    right: -10px;
-    top: 250px;
-}
-.location_info img{
-    width: 83%;
-}
-/* footer */
+    /* main 05 OVER VIEW*/
+    #main05 {
+        width: 768px;
+        height: 600px;
+        /* background-color: yellowgreen; */
+        margin-bottom: 50px;
+    }
+    .main05_inner {
+        position: relative;
+        width: 100%;
+        min-width: 320px;
+        margin: 0 auto;
+        height: 500px;
+    }
+    .main05_inner .overview_box {
+        position: absolute;
+        right: 5px;
+        top: -15px;
+        margin: 0 auto;
+        padding: 0px;
+        text-align: left;
+    }
+    .overview_box h1 {
+        font-size: 51px;
+        margin-bottom: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .overview_box p {
+        margin: 0 auto;
+        /* width: 236px;
+        height: 56px; */
+        font-size: 16px;
+        line-height: 33px;
+        color: #666;
+    }
+    .overview_main {
+        position: relative;
+        width: 768px;
+        height: 500px;
+        /* background-color: yellow; */
+    }
+    /* overview main photo */
+    .overview_main .overview_list {
+        display: flex;
+        height: 216px;
+    }
+    .overview_main p{
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .overview_main h3{
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .overview_main .overview_list .overview_item01 {
+        position: relative;
+        width: 375px;
+        height: 100%;
+        /* overflow: hidden; */
+    }
+    .overview_list .overview_img01 {
+        width: 300px;
+    }
+    .overview_text01 {
+        position: relative;
+        color: #fff;
+        margin-left: 15px;
+        bottom: 50px;
+    }
+    .overview_list .overview_img01 img {
+        width: 100%;
+    }
+    .overview_top{
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+        width: 300px;
+        height: 173px;
+    }
+    /* overview sub photo */
+    .overview_bottom{
+        width: 375px;
+        height: 300px;
+    }
+    .overview_list02 {
+        position: relative;
+        flex-direction: column;
+        overflow: hidden;
+        width: 150px;
+        height: 250px;
+    }
+    .overview_list02 .overview_img02 {
+        width: 150px;
+        height: 250px;
+    }
+    .overview_list02 .overview_img02 img {
+        width: 100%;
+        height: 300px;
+    }
+    .overview_text02 {
+        position: relative;
+        color: #fff;
+        margin-left: 15px;
+        bottom: 60px;
+    }
+    .overview_list03 {
+        position: relative;
+        width: 150px;
+        height: 250px;
+        margin-left: 0;
+        display: flex;
+        overflow: hidden;
+    }
+    .overview_list03 .overview_img03 {
+        width: 150px;
+        height: 250px;
+    }
+    .overview_list03 .overview_img03 img {
+        width: 100%;
+        height: 300px;
+    }
+    .overview_text03 {
+        position: absolute;
+        color: #fff;
+        margin-left: 15px;
+        bottom: 15px;
+    }
+    .overview_list04{
+        position: absolute;
+        left: 150px;
+        top: 0;
+        width: 150px;
+        height: 500px;
+        display: flex;
+        overflow: hidden;
+    }
+    .overview_list04 .overview_img04 {
+        width: 150px;
+        height: 600px;
+    }
+    .overview_list04 .overview_img04 img {
+        width: 150px;
+        height: 600px;
+    }
+    .overview_list05{
+        position: absolute;
+        left: 300px;
+        top: 0px;
+        width: 150px;
+        height: 250px;
+        display: flex;
+        overflow: hidden;
+    }
+    .overview_list05 .overview_img05 {
+        width: 175px;
+        height: 250px;
+    }
+    .overview_list05 .overview_img05 img {
+        width: 100%;
+        height: 250px;
+    }
+    .overview_text05 {
+        position: relative;
+        color: #fff;
+        margin-left: 15px;
+        bottom: 60px;
+    }
+    .overview_list06{
+        position: absolute;
+        left: 300px;
+        top: 250px;
+        width: 150px;
+        height: 250px;
+        display: flex;
+        overflow: hidden;
+    }
+    .overview_list06 .overview_img06 {
+        width: 175px;
+        height: 250px;
+    }
+    .overview_list06 .overview_img06 img {
+        width: 100%;
+        height: 250px;
+    }
+    .overview_text06 {
+        position: relative;
+        color: #fff;
+        margin-left: 15px;
+        bottom: 60px;
+    }
+    /* over view button */
+    .button_box{
+        position: relative;
+        bottom: -28px;
+        display: flex;
+        justify-content: end;
+        width: 100%;
+    }
+    .button_box img{
+        width: 50px;
+        height: 50px;
+    }
+    .button_box .prev_button{
+        position: absolute;
+        right: 252px;
+        bottom: 0px;
+    }
+    .button_box .next_button{
+        position: absolute;
+        right: 188px;
+        bottom: 0px;
+    }
+    /* #main 06 */
+    #main06 {
+        width: 100%;
+        height: 890px;
+        margin-top: 50px;
+    }
+    .about_thek, .hotel_resort{
+        display: block;
+        font-size: 50px;
+    }
+    .about_title_m{
+        display: none;
+    }
+    .about_title{
+        font-family: 'Poppins', sans-serif;
+        font-size: 50px;
+    }
+    .banner_box{
+        position: relative;
+    }
+    .banner_list{
+        position: relative;
+        width: 746px;
+        height: 300px;
+        display: flex;
+        margin: 0 auto;
+    }
+    .banner_list li{
+        position: relative;
+        width: 250px;
+        height: 300px;
+        margin: 0px 5px;
+    }
+    .about_img01{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(./img/about_01.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .about_img02{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(./img/about_02.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .about_img03{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(./img/about_03.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .about_img04{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(./img/about_04.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .about_subtitle{
+        font-size: 23px;
+        margin-bottom: 13px;
+        font-weight: 500;
+    }
+    .main06_about_box button {
+        position: absolute;
+        right: 10px;
+        top: 253px;
+        width: 167px;
+        height: 35px;
+        background-color: #444;
+        color: #fff;
+        font-weight: 600;
+    }
+    .about_text{
+        width: 433px;
+        height: 224px;
+        font-size: 19px;
+        color: #666;
+        font-weight: 500;
+        margin-bottom: 10px;
+        line-height: 33px;
+    }
+    .hotel_link{
+        display: none;
+    }
+    .banner_local{
+        position: relative;
+        font-size: 32px;
+        font-weight: 400;
+        margin-top: 17%;
+        margin-left: 29px;
+        transition: all 0.4s;
+    }
+    .banner_item:hover .banner_local{
+        top: -90px;
+    }
+    .banner_list li:nth-child(3) .banner_local{
+        margin-top: 14%;
+        margin-left: 19px;
+    }
+    .banner_list li:nth-child(3):hover .banner_local{
+        top: -100px;
+    }
+    /* #main 07 */
+    #main07{
+        margin-top: 50px;
+    }
+    .option_address{
+        width: 200px;
+        height: auto;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .location_address, .location_tel{
+        display: block;
+        color: rgb(204, 148, 74);
+    }
+    .location_address{
+        border-top: 1px solid rgb(185, 185, 185);
+        padding-top: 10px;
+    }
+    .location_info{
+        position: absolute;
+        right: -10px;
+        top: 250px;
+    }
+    .location_info img{
+        width: 83%;
+    }
+    /* footer */
     #footer{
         position: absolute;
         width: 768px;
-        height: 1417px;
+        height: 840px;
+
         margin-top: 50px;
     }
     .news_letter{
@@ -2183,13 +2187,14 @@ input::placeholder{
     }
 }
 /* 데스크탑 */
-@media all and (min-width: 960px) {
+@media all and (min-width: 1200px) {
     body {
-        width: 90%;
+        position: relative;
+        width: 100%;
         margin: 0 auto;
     }
     #header{
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
     }
     .container{
@@ -2198,32 +2203,42 @@ input::placeholder{
     }
     .navbar_box{
         position: relative;
-        width: 90%;
+        width: 60%;
         margin: 0 auto;
         padding-top: 20px;
     }
     .navbar{
         width: 100%;
+        margin: 0 auto;
+    }
+    .search_hotel{
+        right: -124px;
+    }
+    .reservation{
+        margin-right: -270px;
     }
     /* main */
     #main01{
         position: relative;
-        width: 90%;
-        height: 600px;
-        margin: 0 auto; 
+        width: 100%;
+        height: 550px;
+        margin: 0 auto;
     }
     .main01_inner{
         position: relative;
-        width: 90%;
+        width: 100%;
         overflow: hidden;
         margin: 0 auto;
     }
     .main_slide{
-        width: 100%;
+        position: relative;
+        width: 80%;
+        height: 870px;
+        margin: 0 auto;
     }
     .main01_inner .main01_img img{
-        width: 1400px;
-        height: 550px;
+        min-width: 100%;
+        height: 700px;
     }
     /* hotel search */
     .hotel_search_container{
@@ -2233,9 +2248,9 @@ input::placeholder{
     /* main02 */
     #main02{
         position: relative;
-        width: 81%;
+        width: 80%;
         margin: 0 auto;
-        background-color: #fff;
+        /* background-color: #fff; */
     }
     .main02_inner{
         width: 100%;
@@ -2249,7 +2264,7 @@ input::placeholder{
     /* main03 */
     #main03{
         position: relative;
-        width: 81%;
+        width: 80%;
         margin: 0 auto;
     }
     .main03_inner{
@@ -2264,30 +2279,66 @@ input::placeholder{
     .package_box{
         position: absolute;
         right: 0;
-        top: -30px;
+        top: -31px;
+    }
+    .package_box h1{
+        margin-left: 45px;
+    }
+    .package_box p{
+        margin-left: 55px;
     }
     .package_button{
         position: absolute;
         bottom: 15px;
-        left: 577px;
+        left: 70%;
     }
     /* main04 */
     #main04{
         position: relative;
-        width: 90%;
+        min-width: 1200px;
+        width: 100%;
+        height: 400px;
         margin: 0 auto;
+        margin-bottom: 70px;
+        background-image: url(./img/todo_bg.jpg);
     }
     .main04_inner{
-        width: 88%;
+        width: 1000px;
+    }
+    .tab_body .content > .content_inner {
+        padding: 20px;
+        position: absolute;
+        top: 269px;
+        height: 94px;
+        width: 100%;
+        min-width: 500px;
+        font-size: 10px;
+        letter-spacing: -0.5px;
+        background-color: rgb(3, 3, 3, 0.5);
+    }
+    .main04_inner .todo_title{
+        width: 354px;
+        margin-left: 0;
+    }
+    .tab_box{
+        left: 175px;
+    }
+    .tab_body{
+        width: 54%;
+        height: 447px;
+        right: 0;
+    }
+    .todo_background img{
+        display: none;
     }
     /* main05 */
     #main05{
         position: relative;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
     .main05_inner{
-        width: 88%;
+        width: 80%;
     }
     .overview_main .overview_list{
         display: flex;
@@ -2302,11 +2353,11 @@ input::placeholder{
     /* main06 */
     #main06{
         position: relative;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
     .main06_inner{
-        width: 90%;
+        width: 80%;
     }
     .banner_box{
         width: 100%;
@@ -2314,7 +2365,7 @@ input::placeholder{
     /* main07 */
     #main07{
         position: relative;
-        width: 90%;
+        width: 80%;
         margin: 0 auto;
     }
     .option_address{
@@ -2342,8 +2393,13 @@ input::placeholder{
     /* footer */
     #footer{
         position: relative;
-        width: 90%;
+        width: 100%;
+        min-width: 1200px;
+        height: 684px;
         margin: 0 auto;
+    }
+    .footer_bar_inner{
+        padding: 40px;
     }
     .news_letter{
         width: 100%;
@@ -2359,5 +2415,9 @@ input::placeholder{
     }
     .news_letter_inner{
         justify-content: space-between;
+    }
+    .footer_logo02 img{
+        width: 15%;
+        margin-bottom: 20px;
     }
 }
