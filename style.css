@@ -530,6 +530,12 @@ li {
     height: 500px;
     margin-top: 100px;
 }
+.todo_background{
+    display: none;
+}
+.overview_list04, .overview_list05, .overview_list06{
+    display: none;
+}
 .main04_inner {
     position: relative;
     width: 100%;
@@ -763,8 +769,6 @@ li {
     height: 50px;
 }
 .button_box .prev_button{
-    width: 30px;
-    height: 30px;
     margin-left: 10px;
 }
 .button_box .next_button{
@@ -783,15 +787,45 @@ li {
     height: 100%;
     margin: 0 auto;
 }
+.about_thek, .hotel_resort{
+    display: none;
+}
 .main06_about_box{
     position: relative;
     background-color: #fff;
     margin: 40px 17px 30px 17px;
 }
+.about_img01{
+    position: relative;
+    width: 381px;
+    height: 129px;
+    background-image: url(./img/about_01_m.jpg);
+}
+.about_img02{
+    position: relative;
+    width: 381px;
+    height: 129px;
+    background-image: url(./img/about_02_m.jpg);
+}
+.about_img03{
+    position: relative;
+    width: 381px;
+    height: 129px;
+    background-image: url(./img/about_03_m.jpg);
+}
+.about_img04{
+    position: relative;
+    width: 381px;
+    height: 129px;
+    background-image: url(./img/about_04_m.jpg);
+}
 .main06_title{
     margin-bottom: 47px;
 }
-.about_title{
+.about_title_m{
+    display: block;
+}
+.about_title_m{
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
 }
@@ -856,15 +890,18 @@ li {
 .banner_item:hover .banner_local{
     top: -60px;
 }
-.banner_item img{
+.banner_item .about{
     transition: all 0.7s linear;
 }
-.banner_item img:hover{
+.banner_item .about:hover{
     transform: scale(1.4);
 }
 .banner_box li{
     position: relative;
-    margin: -3px;
+    margin-bottom: 3px;
+}
+.hotel_link{
+    display: block;
 }
 .hotel_link_text{
     position: absolute;
@@ -1004,6 +1041,9 @@ li {
  }
  .option_address .address{
     margin-bottom: 5px;
+ }
+ .location_address, .location_tel{
+    display: none;
  }
 /* footer */
 #footer{
@@ -1351,16 +1391,6 @@ input::placeholder{
     .toggle_button_box{
         display: none;
     }
-    .main06_about_box button {
-        position: absolute;
-        right: 10px;
-        top: 60px;
-        width: 167px;
-        height: 35px;
-        background-color: #444;
-        color: #fff;
-        font-weight: 600;
-    }
     /* main02 */
     #main02 {
         position: relative;
@@ -1514,7 +1544,7 @@ input::placeholder{
     #main03 {
         position: relative;
         width: 100%;
-        height: 510px;
+        height: 415px;
         background-color: #fff
     }
     .main03_inner {
@@ -1561,10 +1591,10 @@ input::placeholder{
     .package_button{
         position: absolute;
         bottom: 15px;
-        left: 404px;
+        left: 44px;
     }
     .package_button::before{
-        content: '';
+        /* content: ''; */
         display: inline-block;
         width: 10px;
         height: 10px;
@@ -1751,39 +1781,43 @@ input::placeholder{
 /* main 05 OVER VIEW*/
 #main05 {
     width: 768px;
-    height: 550px;
+    height: 600px;
+    /* background-color: yellowgreen; */
+    margin-bottom: 50px;
 }
 .main05_inner {
     position: relative;
     width: 100%;
     min-width: 320px;
     margin: 0 auto;
-    height: 400px;
+    height: 500px;
 }
 .main05_inner .overview_box {
     position: absolute;
-    right: 20px;
+    right: 5px;
+    top: -15px;
     margin: 0 auto;
-    padding: 30px;
-    text-align: center;
+    padding: 0px;
+    text-align: left;
 }
 .overview_box h1 {
-    font-size: 29px;
+    font-size: 51px;
     margin-bottom: 10px;
     font-family: 'Poppins', sans-serif;
 }
 .overview_box p {
     margin: 0 auto;
-    width: 300px;
-    height: 56px;
-    font-size: 13px;
-    line-height: 19px;
+    /* width: 236px;
+    height: 56px; */
+    font-size: 16px;
+    line-height: 33px;
     color: #666;
 }
 .overview_main {
     position: relative;
     width: 768px;
     height: 500px;
+    /* background-color: yellow; */
 }
 /* overview main photo */
 .overview_main .overview_list {
@@ -1805,7 +1839,7 @@ input::placeholder{
     /* overflow: hidden; */
 }
 .overview_list .overview_img01 {
-    width: 375px;
+    width: 300px;
 }
 .overview_text01 {
     position: relative;
@@ -1820,8 +1854,8 @@ input::placeholder{
     position: absolute;
     right: 0px;
     bottom: 0;
-    width: 375px;
-    height: 216px;
+    width: 300px;
+    height: 173px;
 }
 /* overview sub photo */
 .overview_bottom{
@@ -1832,12 +1866,12 @@ input::placeholder{
     position: relative;
     flex-direction: column;
     overflow: hidden;
-    width: 50%;
-    height: 300px;
+    width: 150px;
+    height: 250px;
 }
 .overview_list02 .overview_img02 {
-    width: 187px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
 }
 .overview_list02 .overview_img02 img {
     width: 100%;
@@ -1851,15 +1885,15 @@ input::placeholder{
 }
 .overview_list03 {
     position: relative;
-    width: 50%;
-    height: 300px;
+    width: 150px;
+    height: 250px;
     margin-left: 0;
     display: flex;
     overflow: hidden;
 }
 .overview_list03 .overview_img03 {
-    width: 188px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
 }
 .overview_list03 .overview_img03 img {
     width: 100%;
@@ -1873,38 +1907,66 @@ input::placeholder{
 }
 .overview_list04{
     position: absolute;
-    left: 187px;
+    left: 150px;
     top: 0;
-    width: 188px;
-    height: 600px;
+    width: 150px;
+    height: 500px;
     display: flex;
     overflow: hidden;
 }
 .overview_list04 .overview_img04 {
-    width: 188px;
+    width: 150px;
     height: 600px;
 }
 .overview_list04 .overview_img04 img {
-    width: 188px;
+    width: 150px;
     height: 600px;
 }
 .overview_list05{
     position: absolute;
-    left: 374px;
+    left: 300px;
     top: 0px;
-    width: 188px;
-    height: 300px;
+    width: 150px;
+    height: 250px;
     display: flex;
     overflow: hidden;
 }
+.overview_list05 .overview_img05 {
+    width: 175px;
+    height: 250px;
+}
+.overview_list05 .overview_img05 img {
+    width: 100%;
+    height: 250px;
+}
+.overview_text05 {
+    position: relative;
+    color: #fff;
+    margin-left: 15px;
+    bottom: 60px;
+}
 .overview_list06{
     position: absolute;
-    left: 374px;
-    top: 300px;
-    width: 188px;
-    height: 300px;
+    left: 300px;
+    top: 250px;
+    width: 150px;
+    height: 250px;
     display: flex;
     overflow: hidden;
+}
+.overview_list06 .overview_img06 {
+    width: 175px;
+    height: 250px;
+}
+.overview_list06 .overview_img06 img {
+    width: 100%;
+    height: 250px;
+}
+.overview_text06 {
+    position: relative;
+    color: #fff;
+    margin-left: 15px;
+    bottom: 60px;
 }
 /* over view button */
 .button_box{
@@ -1919,20 +1981,366 @@ input::placeholder{
     height: 50px;
 }
 .button_box .prev_button{
-    margin-left: 3px;
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
+    position: absolute;
+    right: 252px;
+    bottom: 0px;
 }
 .button_box .next_button{
-    margin-right: 10px;
+    position: absolute;
+    right: 188px;
+    bottom: 0px;
 }
-
-
+/* #main 06 */
+#main06 {
+    width: 100%;
+    height: 890px;
+    margin-top: 50px;
+}
+.about_thek, .hotel_resort{
+    display: block;
+    font-size: 50px;
+}
+.about_title_m{
+    display: none;
+}
+.about_title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+}
+.banner_box{
+    position: relative;
+}
+.banner_list{
+    position: relative;
+    width: 746px;
+    height: 300px;
+    display: flex;
+    margin: 0 auto;
+}
+.banner_list li{
+    position: relative;
+    width: 250px;
+    height: 300px;
+    margin: 0px 5px;
+}
+.about_img01{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/about_01.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.about_img02{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/about_02.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.about_img03{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/about_03.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.about_img04{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(./img/about_04.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.about_subtitle{
+    font-size: 23px;
+    margin-bottom: 13px;
+    font-weight: 500;
+}
+.main06_about_box button {
+    position: absolute;
+    right: 10px;
+    top: 253px;
+    width: 167px;
+    height: 35px;
+    background-color: #444;
+    color: #fff;
+    font-weight: 600;
+}
+.about_text{
+    width: 433px;
+    height: 224px;
+    font-size: 19px;
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 10px;
+    line-height: 33px;
+}
+.hotel_link{
+    display: none;
+}
+.banner_local{
+    position: relative;
+    font-size: 32px;
+    font-weight: 400;
+    margin-top: 17%;
+    margin-left: 29px;
+    transition: all 0.4s;
+}
+.banner_item:hover .banner_local{
+    top: -90px;
+}
+.banner_list li:nth-child(3) .banner_local{
+    margin-top: 14%;
+    margin-left: 19px;
+}
+.banner_list li:nth-child(3):hover .banner_local{
+    top: -100px;
+}
+/* #main 07 */
+#main07{
+    margin-top: 50px;
+}
+.option_address{
+    width: 200px;
+    height: auto;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.location_address, .location_tel{
+    display: block;
+    color: rgb(204, 148, 74);
+}
+.location_address{
+    border-top: 1px solid rgb(185, 185, 185);
+    padding-top: 10px;
+}
+.location_info{
+    position: absolute;
+    right: -10px;
+    top: 250px;
+}
+.location_info img{
+    width: 83%;
+}
+/* footer */
+    #footer{
+        position: absolute;
+        width: 768px;
+        height: 1417px;
+        margin-top: 50px;
+    }
+    .news_letter{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .news_letter_inner{
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .letter_box input{
+        width: 146px;
+        padding: 10px;
+    }
+    .letter_box button{
+        width: 70px;
+        height: 41px;
+        padding: 10px;
+    }
+    .news_letter_inner{
+        width: 100%;
+        padding-top: 25px;
+    }
+    .news_letter img{
+        width: 176px;
+    }
+    .news_letter p{
+        font-size: 17px;
+    }
 }
 /* 데스크탑 */
 @media all and (min-width: 960px) {
     body {
-        background-color: darkkhaki;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #header{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container{
+        position: relative;
+        margin: 0 auto;
+    }
+    .navbar_box{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 20px;
+    }
+    .navbar{
+        width: 100%;
+    }
+    /* main */
+    #main01{
+        position: relative;
+        width: 90%;
+        height: 600px;
+        margin: 0 auto; 
+    }
+    .main01_inner{
+        position: relative;
+        width: 90%;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+    .main_slide{
+        width: 100%;
+    }
+    .main01_inner .main01_img img{
+        width: 1400px;
+        height: 550px;
+    }
+    /* hotel search */
+    .hotel_search_container{
+        width: 90%;
+        margin: 0 auto;
+    }
+    /* main02 */
+    #main02{
+        position: relative;
+        width: 81%;
+        margin: 0 auto;
+        background-color: #fff;
+    }
+    .main02_inner{
+        width: 100%;
+    }
+    .promotion{
+        width: 100%;
+    }
+    .promotion_container{
+        overflow: hidden;
+    }
+    /* main03 */
+    #main03{
+        position: relative;
+        width: 81%;
+        margin: 0 auto;
+    }
+    .main03_inner{
+        width: 100%;
+    }
+    .package{
+        width: 100%;
+    }
+    .package_container{
+        overflow: hidden;
+    }
+    .package_box{
+        position: absolute;
+        right: 0;
+        top: -30px;
+    }
+    .package_button{
+        position: absolute;
+        bottom: 15px;
+        left: 577px;
+    }
+    /* main04 */
+    #main04{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main04_inner{
+        width: 88%;
+    }
+    /* main05 */
+    #main05{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main05_inner{
+        width: 88%;
+    }
+    .overview_main .overview_list{
+        display: flex;
+        overflow: hidden;
+    }
+    .overview_top{
+        right: -141px;
+    }
+    .button_box{
+        margin-left: 140px;
+    }
+    /* main06 */
+    #main06{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .main06_inner{
+        width: 90%;
+    }
+    .banner_box{
+        width: 100%;
+    }
+    /* main07 */
+    #main07{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .option_address{
+        width: 200px;
+        height: auto;
+        padding: 15px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .location_address, .location_tel{
+        display: block;
+        color: rgb(204, 148, 74);
+    }
+    .location_address{
+        border-top: 1px solid rgb(185, 185, 185);
+        padding-top: 10px;
+    }
+    .location_info{
+        position: absolute;
+        right: 0;
+        top: 250px;
+    }
+    .location_info img{
+        width: 83%;
+    }
+    /* footer */
+    #footer{
+        position: relative;
+        width: 90%;
+        margin: 0 auto;
+    }
+    .news_letter{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .letter_box{
+        position: absolute;
+        top: 50%;
+        right: 7%;
+    }
+    .news_letter_inner{
+        width: 76%;
+    }
+    .news_letter_inner{
+        justify-content: space-between;
     }
 }

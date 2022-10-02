@@ -211,8 +211,6 @@ function slideOverview(){
 
 }
 
-
-
 /* LOCATION drop down menu */
 //active 추가 되었을 경우에만 list 보이게 하기
 function onClickSelect(e) {

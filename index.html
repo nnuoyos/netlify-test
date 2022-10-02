@@ -756,15 +756,17 @@
                 <div class="main06_inner">
                     <div class="main06_about_box">
                         <div class="main06_title">
-                            <h3 class="about_title about">About</h3>
-                            <h3 class="about_title the-k">The-K HOTEL&RESORT</h3>
+                            <h3 class="about_title_m about">About</h3>
+                            <h3 class="about_title_m the-k">The-K HOTEL&RESORT</h3>
+                            <h3 class="about_title about_thek">About The-K</h3>
+                            <h3 class="about_title hotel_resort">HOTEL&RESORT</h3>
                         </div>
                         <p class="about_subtitle">아름다운 자연 속에서 진정한 휴식</p>
                         <p class="about_text">
-                            한국교직원공제회가 전액 출자한 The-K호텔앤리조트는 <br>
-                            특급호텔인 The-K호텔서울, The-K호텔경주를 비롯하여 수려한 <br>
+                            한국교직원공제회가 전액 출자한 The-K호텔앤리조트는
+                            특급호텔인 The-K호텔서울, The-K호텔경주를 비롯하여 수려한
                             자연경관에 위치한 The-K지리산가족호텔, 
-                            The-K <br>설악산가족호텔을 운영하고 있어 자연이 주는 여유로움을 만끽할 수 있습니다.
+                            The-K 설악산가족호텔을 운영하고 있어 자연이 주는 여유로움을 만끽할 수 있습니다.
                         </p>
                         <button>
                             <p>자세히 보기</p>
@@ -774,7 +776,8 @@
                     <div class="banner_box">
                         <ul class="banner_list">
                             <li class="banner_item">
-                                <img src="./img/about_01_m.jpg" alt="서울호텔소개바로가기">
+                                <div class="about_img01 about"></div>
+                                <!-- <img src="./img/about_01_m.jpg" alt="서울호텔소개바로가기"> -->
                                 <div class="hotel_link_text">
                                     <p class="banner_local">서울</p>
                                     <a href="#">
@@ -783,7 +786,8 @@
                                 </div>
                             </li>
                             <li class="banner_item">
-                                <img src="./img/about_02_m.jpg" alt="경주호텔소개바로가기">
+                                <div class="about_img02 about"></div>
+                                <!-- <img src="./img/about_02_m.jpg" alt="경주호텔소개바로가기"> -->
                                 <div class="hotel_link_text">
                                     <p class="banner_local">경주</p>
                                     <a href="#">
@@ -792,7 +796,8 @@
                                     </div>
                             </li>
                             <li class="banner_item">
-                                <img src="./img/about_03_m.jpg" alt="지리산호텔소개바로가기">
+                                <div class="about_img03 about"></div>
+                                <!-- <img src="./img/about_03_m.jpg" alt="지리산호텔소개바로가기"> -->
                                 <div class="hotel_link_text">
                                     <p class="banner_local">지리산</p>
                                     <a href="#">
@@ -801,7 +806,8 @@
                                     </div>
                             </li>
                             <li class="banner_item">
-                                <img src="./img/about_04_m.jpg" alt="설악호텔소개바로가기">
+                                <div class="about_img04 about"></div>
+                                <!-- <img src="./img/about_04_m.jpg" alt="설악호텔소개바로가기"> -->
                                 <div class="hotel_link_text">
                                     <p class="banner_local">설악</p>
                                     <a href="#">
@@ -846,28 +852,35 @@
                     </div>
                     <!-- .select end -->
                     <div class="map_box" id="map">
-                        <!-- <div id="address01" class="map_img"></div> -->
                     </div>
                     <div class="location_info">
                         <ul class="address_list">
                             <li class="option_address" id="address02">
                                 <h2><img src="./img/logo_branch_gyeongju.svg" alt="호텔경주로고"></h2>
+                                <div class="location_address">ADDRESS</div>
                                 <p class="address">경상북도 경주시 엑스포로 45 (우38116)</p>
+                                <div class="location_tel">TEL</div>
                                 <p class="tel_number">054-745-8100</p>
                             </li>
                             <li class="option_address" id="address03">
                                 <h2><img src="./img/logo_branch_jiri.svg" alt="호텔지리산로고"></h2>
+                                <div class="location_address">ADDRESS</div>
                                 <p class="address">전라남도 구례군 산동면 지리산온천로 317</p>
+                                <div class="location_tel">TEL</div>
                                 <p class="tel_number">061-738-8100</p>
                             </li>
                             <li class="option_address" id="address04">
                                 <h2><img src="./img/logo_branch_seorak.svg" alt="호텔설악로고"></h2>
+                                <div class="location_address">ADDRESS</div>
                                 <p class="address">강원도 속초시 설악산로 470-7</p>
+                                <div class="location_tel">TEL</div>
                                 <p class="tel_number">033-639-8100</p>
                             </li>
                             <li class="option_address" id="address01">
                                 <h2><img src="./img/logo_branch_seoul.svg" alt="호텔서울로고"></h2>
+                                <div class="location_address">ADDRESS</div>
                                 <p class="address">서울특별시 서초구 바우뫼로 12길 70</p>
+                                <div class="location_tel">TEL</div>
                                 <p class="tel_number">02-571-8100</p>
                             </li>
                         </ul>
@@ -882,8 +895,10 @@
             <div class="footer_inner">
                 <div class="news_letter">
                     <div class="news_letter_inner">
-                        <h2><img src="./img/f_newsletter.png" alt="news letter"></h2>
-                        <p>뉴스레터를 신청하시면 더케이호텔의 각종 최신정보를 받아보실 수 있습니다</p>
+                        <ul>
+                            <h2><img src="./img/f_newsletter.png" alt="news letter"></h2>
+                            <p>뉴스레터를 신청하시면 더케이호텔의 각종 최신정보를 받아보실 수 있습니다</p>
+                        </ul>
                         <ul class="letter_box">
                             <input class="input" type="text" placeholder="이메일 주소를 입력해주세요.">
                             <button>신청</button>
