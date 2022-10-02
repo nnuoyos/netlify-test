@@ -149,7 +149,7 @@ $(function () {
 });
 
 /* tab menu */
-//페이지 들어가자마자 첫번째 화면 보이도록 구현 다시 하기
+//페이지 들어가자마자 첫번째 탭 화면 보이도록 수정하기(지리산으로 나옴)
 
 $(function () {
     let tabList = $('.tabs_nav li');
@@ -236,7 +236,7 @@ function onClickSelect(e) {
     option.addEventListener("click", onClickOption);
   }
   
-  //해당 메뉴를 클릭하면 맵 하단에 해당 주소정보 보여주기
+  //드롭메뉴에서 호텔을 클릭하면 맵 하단에 해당 호텔의 주소 정보 보여주기
   $(function () {
     let address = $('.option_list li a');
     let addressPanel = $('.option_address');
