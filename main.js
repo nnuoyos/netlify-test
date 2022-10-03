@@ -208,8 +208,14 @@ function slideOverview(){
             slideList.style.transform = "translate3d(-" + (slideWidth)
         }
     })
-
 }
+/* over view main slide */
+$('.overview_list').slick({
+    prevArrow : $('.prev'),
+    nextArrow : $('.next'),
+});
+
+
 
 /* LOCATION drop down menu */
 //active 추가 되었을 경우에만 list 보이게 하기

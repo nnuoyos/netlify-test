@@ -1266,6 +1266,21 @@ input::placeholder{
         display: flex;
         background-color: var(--background-color);
     }
+    .navbar_inner_right{
+        width: 438px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .login,.reservation_lookup{
+        margin-left: 0;
+    }
+    .navbar_inner_right .login, .navbar_inner_right .reservation_lookup{
+        margin-right: 10px;
+    }
+    .hotel_search_container{
+        width: 100%;
+    }
     .navbar_logo h1 {
         margin-left: 8px;
         height: 15px;
@@ -1276,22 +1291,16 @@ input::placeholder{
         white-space: nowrap;
         overflow: hidden;
     }
-    .login{
-        margin-left: -70px;
-    }
-    .reservation_lookup{
-        margin-left: -40px;
-    }
     .reservation{
         border: 2px solid rgb(149, 119, 95);
         padding: 9px 34px;
         color: rgb(149, 119, 95);
-        margin-right: -150px;
+        margin-right: 0px;
     }
     .search_hotel {
         background-color: rgb(149, 119, 95);
         padding: 11px 28px;
-        right: -72px;
+        right: 0;
         font-size: 12px;
         color: #fff;
         font-weight: 500;
@@ -1810,8 +1819,6 @@ input::placeholder{
     }
     .overview_box p {
         margin: 0 auto;
-        /* width: 236px;
-        height: 56px; */
         font-size: 16px;
         line-height: 33px;
         color: #666;
@@ -1859,6 +1866,11 @@ input::placeholder{
         bottom: 0;
         width: 300px;
         height: 173px;
+    }
+    .slick-arrow{
+        width: 50px;
+        height: 50px;
+        background-color: tomato;
     }
     /* overview sub photo */
     .overview_bottom{
@@ -2194,6 +2206,8 @@ input::placeholder{
         margin: 0 auto;
     }
     #header{
+        position: relative;
+        min-width: 1200px;
         width: 100%;
         margin: 0 auto;
     }
@@ -2203,7 +2217,7 @@ input::placeholder{
     }
     .navbar_box{
         position: relative;
-        width: 60%;
+        width: 90%;
         margin: 0 auto;
         padding-top: 20px;
     }
@@ -2211,11 +2225,17 @@ input::placeholder{
         width: 100%;
         margin: 0 auto;
     }
-    .search_hotel{
-        right: -124px;
+    .navbar_inner_right{
+        width: 454px;
     }
-    .reservation{
-        margin-right: -270px;
+    .navbar_inner_right .login, .navbar_inner_right .reservation_lookup{
+        margin-right: 20px;
+    }
+    .hotel_search_container{
+        width: 100%;
+    }
+    .hotel_search_container ul{
+        width: 62%;
     }
     /* main */
     #main01{
@@ -2223,6 +2243,9 @@ input::placeholder{
         width: 100%;
         height: 550px;
         margin: 0 auto;
+    }
+    .container{
+        width: 100%;
     }
     .main01_inner{
         position: relative;
@@ -2232,18 +2255,13 @@ input::placeholder{
     }
     .main_slide{
         position: relative;
-        width: 80%;
+        width: 90%;
         height: 870px;
         margin: 0 auto;
     }
     .main01_inner .main01_img img{
         min-width: 100%;
         height: 700px;
-    }
-    /* hotel search */
-    .hotel_search_container{
-        width: 90%;
-        margin: 0 auto;
     }
     /* main02 */
     #main02{
@@ -2350,6 +2368,14 @@ input::placeholder{
     .button_box{
         margin-left: 140px;
     }
+    .button_box {
+        position: relative;
+        width: 100%;
+        bottom: -28px;
+        display: flex;
+        justify-content: end;
+    }
+
     /* main06 */
     #main06{
         position: relative;
@@ -2409,6 +2435,9 @@ input::placeholder{
         position: absolute;
         top: 50%;
         right: 7%;
+    }
+    .letter_box input{
+        width: 275px;
     }
     .news_letter_inner{
         width: 76%;
