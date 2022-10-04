@@ -341,13 +341,32 @@ body {
     display: flex;
     flex-wrap: nowrap;
 }
+#promotion_li{
+    width: 300px;
+}
 .slide_box img {
     width: 290px;
     height: 230px;
+    display: table-cell;
+    background-color: thistle;
+}
+/* slick */
+.slick-dots{
+    color: red;
+}
+.slick-slide {
+    margin: 0 50px; 
+  }
+  .slick-list {
+    margin: 0 -30px; 
+  }
+.slide_box .slick-list {
+    margin:0 -20px;
 }
 .slide_box .slide_img_box {
     border-top: 2px solid #555555;
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    margin-left: 0px;
 }
 .slide_img {
     width: 100%;
@@ -1451,14 +1470,14 @@ input::placeholder{
         bottom: 15px;
         left: 240px;
     }
-    .promotion_button::before{
+/*     .promotion_button::before{
         content: '';
         display: inline-block;
         width: 10px;
         height: 10px;
         border-bottom: 2px solid #b6b6b6;
         box-sizing: border-box;
-    }
+    } */
     .promotion_button .prev_button{
         position: relative;
         border: 1px solid #b6b6b6;
@@ -1469,7 +1488,7 @@ input::placeholder{
         width: 60px;
         height: 60px;
     }
-    .promotion_button .prev_button a::after{
+    .promotion_button .prev_button p::after{
         content: '';
         display: inline-block;
         vertical-align: top;
@@ -1492,7 +1511,7 @@ input::placeholder{
         width: 60px;
         height: 60px;
     }
-    .promotion_button .next_button a::after{
+    .promotion_button .next_button p::after{
         content: '';
         display: inline-block;
         vertical-align: top;
@@ -1502,6 +1521,14 @@ input::placeholder{
         border-right: 1px solid #999;
         border-bottom: 1px solid #999;
         transform: rotate(315deg);
+    }
+    .slick-slide{
+        width: 310px;
+    }
+    .slick-dots{
+        position: absolute;
+        top: 20%;
+        display: flex;
     }
     .slide_box {
         position: absolute;
@@ -1520,6 +1547,7 @@ input::placeholder{
         text-align: left;
     }
     .slide_box .slide_img_box {
+        width: 290px;
         border-top: 2px solid #555555;
         margin-left: 20px;
     }
@@ -1870,7 +1898,6 @@ input::placeholder{
     .slick-arrow{
         width: 50px;
         height: 50px;
-        background-color: tomato;
     }
     /* overview sub photo */
     .overview_bottom{
@@ -2362,17 +2389,23 @@ input::placeholder{
         display: flex;
         overflow: hidden;
     }
-    .overview_top{
-        right: -141px;
+    .overview_list .overview_img01{
+        width: 400px;
     }
-    .button_box{
-        margin-left: 140px;
+    .overview_top{
+        width: 400px;
+        right: -141px;
+        bottom: 42px;
+    }
+    .overview_text01{
+        bottom: 76px;
     }
     .button_box {
         position: relative;
         width: 100%;
-        bottom: -28px;
+        bottom: 16px;
         display: flex;
+        margin-left: 43px;
         justify-content: end;
     }
 

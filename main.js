@@ -60,7 +60,32 @@ setInterval(function(){
 
 
 /* promotion */
-let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
+$(function(){
+    $('#promotion_ul').slick({
+        /* slide: '#promotion_ul', */
+        prevArrow : $('.prev_button'),
+        nextArrow : $('.next_button'),
+        slideToShow:3,
+        speed: 600,
+        arrows : true,
+        dots: true,
+        /* pauseOnHover: true, */
+        /* autoplay: true, */
+        infinite: true,
+        draggable : true,
+        responsive: [
+            {
+                breakpoint : 1280,
+                settings:{
+                    slideToShow:3
+                }
+            },
+        ]
+    })
+})
+
+
+/* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
 let slide = document.querySelector('#promotion_ul'); //ul
 let slideItem = document.querySelectorAll('.slide_img_box') //li
 let maxSlide = slideItem.length; //슬라이드(li) 길이
@@ -71,12 +96,12 @@ const slideItemWidth = 310; // 슬라이드 한 개의 넓이 290px, 마진 20 �
 slide.style.width = slideWidth * maxSlide + 'px'; //전체 슬라이드 컨테이너 넓이 설정
 const slideMargin = 20; //슬라이드 사이의 마진 값 20px
 const prevButton = document.querySelector('.prev_button');
-const nextButton = document.querySelector('.next_button');
+const nextButton = document.querySelector('.next_button'); */
 
-promotionAutoSlides();
+//promotionAutoSlides();
 
 /* 자동 슬라이드 */
-function promotionAutoSlides() {
+/* function promotionAutoSlides() {
     for (let i = 0; i < maxSlide; i++) {
         slide.style.transition = '.3s';
         slide.style.left = -(310 * currSlideIndex) + 'px';
@@ -88,9 +113,9 @@ function promotionAutoSlides() {
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItems.forEach((i) => i.classList.remove("active"));
     paginationItems[currSlideIndex-1].classList.add("active");
-}
+} */
 /* paging button click */
-$(function () {
+/* $(function () {
     let container = $('#promotion_ul');
     let pagination = $('#promotion_list > li');
     let pageBtn = $('#promotion_list > li > a');
@@ -105,7 +130,7 @@ $(function () {
         pageBtn.eq(nowIndex).parent().siblings().removeClass('active');
         container.animate({ left: -310 * nowIndex });
     });
-});
+}); */
 
 /* package */
 let packageWrapper = document.querySelector('.package_container'); //최상위 요소
