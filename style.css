@@ -341,53 +341,46 @@ body {
     display: flex;
     flex-wrap: nowrap;
 }
-#promotion_li{
-    width: 300px;
-}
 .slide_box img {
     width: 290px;
     height: 230px;
     display: table-cell;
-    background-color: thistle;
 }
 /* slick */
-.slide_box .slick-dots{
-    color: red;
-}
 .slick-slide {
-    margin: 0 50px; 
-<<<<<<< HEAD
+    width: 295px;
+    margin-left: 20px;
 }
 .slick-list {
-    padding-left: 0px!important; /* half partial */
-    padding: 0 300px 0 0;
+    width: 5720px;
+    /* padding-left: 0px!important; */ /* half partial */
+    /* padding: 0 30px 0 0;
+    margin: 0 -30px;  */
 }
-=======
-  }
-  .slick-list {
-    margin: 0 -30px; 
-  }
->>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
 .slide_box .slick-list {
     margin:0 -20px;
 }
 .slide_box .slide_img_box {
+    width: 295px;
     border-top: 2px solid #555555;
     /* margin-left: 20px; */
-    margin-left: 0px;
+   /*  margin-left: 290px; */
+   background-color: #fff;
+   padding: 20px;
 }
 .slide_img {
-    width: 100%;
+    width: 290px;
     height: auto;
 }
-.slide_img_box {
-    background-color: #fff;
-}
 .main02_slide_textbox {
+    width: 290px;
     height: 70px;
     background-color: #fff;
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
     text-align: left;
+}
+.main02_slide_textbox p, .main02_slide_textbox div{
+    margin-left: 20px;
 }
 .text_title {
     width: 250px;
@@ -1534,12 +1527,9 @@ input::placeholder{
         border-bottom: 1px solid #999;
         transform: rotate(315deg);
     }
+    /* slick */
     .slick-slide{
-<<<<<<< HEAD
-        display: block;
-=======
->>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
-        width: 310px;
+        width: 290px;
     }
     .slick-dots{
         position: absolute;
@@ -1557,15 +1547,21 @@ input::placeholder{
         height: auto;
     }
     .main02_slide_textbox {
+        width: 290px;
         height: 70px;
         background-color: #fff;
         padding: 20px;
         text-align: left;
     }
+    .main02_slide_textbox p, .main02_slide_textbox div{
+        margin-left: 0;
+    }
     .slide_box .slide_img_box {
         width: 290px;
         border-top: 2px solid #555555;
-        margin-left: 20px;
+        margin-left: 3px;
+        /* padding-right: 20px; */
+        padding: 0px 20px 0px 0px;
     }
     .text_title {
         width: 250px;
@@ -2309,12 +2305,12 @@ input::placeholder{
     /* main02 */
     #main02{
         position: relative;
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         /* background-color: #fff; */
     }
     .main02_inner{
-        width: 100%;
+        width: 90%;
     }
     .promotion{
         width: 100%;
@@ -2324,6 +2320,36 @@ input::placeholder{
     }
     .promotion_container{
         overflow: hidden;
+    }
+    /* slick */
+    .slick-list{
+        margin-left: -90px;
+    }
+    .slick-slide{
+
+        width: 290px;
+    }
+    .slide_box{
+        margin-left: 394px;
+    }
+    .slide_box li{
+        padding-right: 40px;
+    }
+    .slide_box .slide_img_box{
+        width: 290px;
+        border-top: 2px solid #555555;
+        margin-left: 0px;
+        padding-right: 12px;
+        padding: 0;
+    }
+    .main02_slide_textbox{
+        width: 290px;
+        margin-right: -80px;
+        padding: 20px 0px 20px 0px;
+        background-color: antiquewhite;
+    }
+    .main02_slide_textbox p,.main02_slide_textbox div{
+        margin-left: 20px;
     }
     /* main03 */
     #main03{

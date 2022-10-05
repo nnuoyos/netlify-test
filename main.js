@@ -60,55 +60,71 @@ setInterval(function(){
 
 
 /* promotion */
-<<<<<<< HEAD
-let $carousel = $('#promotion_ul');
+var $carousel = $('#promotion_ul');
 
-let settings = {
-    dots:false,
+var settings = {
+    dots: false,
+    arrows: true,
     prevArrow : $('.prev_button'),
     nextArrow : $('.next_button'),
-    // slide:'.slide_img_box',
-    slideToShow: 3,
-    centerMode: true,
-    centerPadding : '1100px',
+    slidesToShow: 3,
+    centerMode: false,
+    padding : '-20px',
+    /* autoplay: true, */
+    infinite: true,
+    /* centerPadding: '-60px', */
+    responsive: [
+        {
+            breakpoint : 768,
+            settings:{
+                slideToShow:2,
+                dots: false,
+                arrows: true,
+                prevArrow : $('.prev_button'),
+                nextArrow : $('.next_button'),
+                slidesToShow: 3,
+                centerMode: false,
+                padding : '-20px',
+                
+            }
+        },
+    ]
 };
 
-function setSlideVisibility(){
-    let visibleSlides = $carousel.find('..slick-slideshow__slide[aria-hidden="false"]');
-    $(visibleSlides).each(function(){
-        $(this).css('opacity', 1);
-    });
-    $(visibleSlides).first().prev().css('.opacity', 0);
+function setSlideVisibility() {
+  //Find the visible slides i.e. where aria-hidden="false"
+  var visibleSlides = $carousel.find('.slide_box[aria-hidden="false"]');
+  //Make sure all of the visible slides have an opacity of 1
+  $(visibleSlides).each(function() {
+    $(this).css('opacity', 1);
+  });
+
+  //Set the opacity of the first and last partial slides.
+  $(visibleSlides).first().prev().css('opacity', 0);
 }
 
 $carousel.slick(settings);
 $carousel.slick('slickGoTo', 1);
 setSlideVisibility();
 
-$carousel.on('afterChange', function(){
-    setSlideVisibility();
+$carousel.on('afterChange', function() {
+  setSlideVisibility();
 });
+
+
 
 
 /* $(function(){
     $('#promotion_ul').slick({
-       
-=======
-$(function(){
-    $('#promotion_ul').slick({
-        /* slide: '#promotion_ul', */
->>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
+        slide: '#promotion_ul',
         prevArrow : $('.prev_button'),
         nextArrow : $('.next_button'),
         slideToShow:3,
         speed: 600,
         arrows : true,
         dots: true,
-<<<<<<< HEAD
-=======
-        /* pauseOnHover: true, */
-        /* autoplay: true, */
->>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
+        pauseOnHover: true,
+        autoplay: true,
         infinite: true,
         draggable : true,
         responsive: [
@@ -120,11 +136,7 @@ $(function(){
             },
         ]
     })
-<<<<<<< HEAD
 }) */
-=======
-})
->>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
 
 
 /* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
