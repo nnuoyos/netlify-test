@@ -60,6 +60,7 @@ setInterval(function(){
 
 
 /* promotion */
+<<<<<<< HEAD
 let $carousel = $('#promotion_ul');
 
 let settings = {
@@ -92,12 +93,22 @@ $carousel.on('afterChange', function(){
 /* $(function(){
     $('#promotion_ul').slick({
        
+=======
+$(function(){
+    $('#promotion_ul').slick({
+        /* slide: '#promotion_ul', */
+>>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
         prevArrow : $('.prev_button'),
         nextArrow : $('.next_button'),
         slideToShow:3,
         speed: 600,
         arrows : true,
         dots: true,
+<<<<<<< HEAD
+=======
+        /* pauseOnHover: true, */
+        /* autoplay: true, */
+>>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
         infinite: true,
         draggable : true,
         responsive: [
@@ -109,7 +120,11 @@ $carousel.on('afterChange', function(){
             },
         ]
     })
+<<<<<<< HEAD
 }) */
+=======
+})
+>>>>>>> e88e0fc01a93ba4329578d5b4d5c11dd957bc924
 
 
 /* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
