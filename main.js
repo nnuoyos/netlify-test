@@ -63,22 +63,36 @@ setInterval(function(){
 var $carousel = $('#promotion_ul');
 
 var settings = {
-    dots: false,
+    dots: true,
     arrows: true,
     prevArrow : $('.prev_button'),
     nextArrow : $('.next_button'),
     slidesToShow: 3,
+    pauseOnHover : true, //슬라이드 이동 시 마우스호버하면 일시정지
     centerMode: false,
+    variableWidth: true,
     padding : '-20px',
-    /* autoplay: true, */
+    autoplay: true,
     infinite: true,
     /* centerPadding: '-60px', */
-    responsive: [
+    responsive: [ //반응형 웹 사이즈
+        {
+            breakpoint : 375,
+            settings:{
+                slideToShow:2,
+                dots: true,
+                arrows: true,
+                slidesToShow: 1,
+                centerMode: false,
+                padding : '-20px',
+                
+            }
+        },
         {
             breakpoint : 768,
             settings:{
                 slideToShow:2,
-                dots: false,
+                /* dots: true, */
                 arrows: true,
                 prevArrow : $('.prev_button'),
                 nextArrow : $('.next_button'),
@@ -88,6 +102,20 @@ var settings = {
                 
             }
         },
+        {
+            breakpoint : 1200,
+            settings:{
+                slideToShow:2,
+                /* dots: true, */
+                arrows: true,
+                prevArrow : $('.prev_button'),
+                nextArrow : $('.next_button'),
+                slidesToShow: 3,
+                centerMode: false,
+                padding : '-20px',
+                
+            }
+        }
     ]
 };
 
@@ -110,33 +138,6 @@ setSlideVisibility();
 $carousel.on('afterChange', function() {
   setSlideVisibility();
 });
-
-
-
-
-/* $(function(){
-    $('#promotion_ul').slick({
-        slide: '#promotion_ul',
-        prevArrow : $('.prev_button'),
-        nextArrow : $('.next_button'),
-        slideToShow:3,
-        speed: 600,
-        arrows : true,
-        dots: true,
-        pauseOnHover: true,
-        autoplay: true,
-        infinite: true,
-        draggable : true,
-        responsive: [
-            {
-                breakpoint : 1280,
-                settings:{
-                    slideToShow:3
-                }
-            },
-        ]
-    })
-}) */
 
 
 /* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
@@ -187,7 +188,7 @@ const nextButton = document.querySelector('.next_button'); */
 }); */
 
 /* package */
-let packageWrapper = document.querySelector('.package_container'); //최상위 요소
+/* let packageWrapper = document.querySelector('.package_container'); //최상위 요소
 let slidePackage = document.querySelector('#package_ul'); //ul 슬라이드 전체 width 구하기
 let slideItemPackage = document.querySelectorAll('.slide_img_box_main03') //li
 let maxSlidePackage = slideItemPackage.length; //슬라이드 길이
@@ -195,7 +196,7 @@ let currSlidePackage = 0; //현재 슬라이드 위치
 let slideWidthPackage  = packageWrapper.clientWidth; //promotion_container의 width
 let paginationItemsPackage = document.querySelectorAll('#package_list > li');
 slidePackage.style.width = slideWidthPackage * maxSlidePackage + 'px';
-packageSlides();
+packageSlides(); */
 
 function packageSlides() {
     for (let i = 0; i < maxSlidePackage; i++) {
