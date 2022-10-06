@@ -74,7 +74,7 @@ var settings = {
     padding : '-20px',
     autoplay: true,
     infinite: true,
-    /* centerPadding: '-60px', */
+
     responsive: [ //반응형 웹 사이즈
         {
             breakpoint : 375,
@@ -92,7 +92,7 @@ var settings = {
             breakpoint : 768,
             settings:{
                 slideToShow:2,
-                /* dots: true, */
+               
                 arrows: true,
                 prevArrow : $('.prev_button'),
                 nextArrow : $('.next_button'),
@@ -106,7 +106,7 @@ var settings = {
             breakpoint : 1200,
             settings:{
                 slideToShow:2,
-                /* dots: true, */
+                
                 arrows: true,
                 prevArrow : $('.prev_button'),
                 nextArrow : $('.next_button'),
@@ -138,6 +138,10 @@ setSlideVisibility();
 $carousel.on('afterChange', function() {
   setSlideVisibility();
 });
+
+
+
+/* test */
 
 
 /* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소

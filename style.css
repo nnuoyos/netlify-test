@@ -1920,11 +1920,12 @@ input::placeholder{
     }
     .overview_list .overview_img01 {
         width: 300px;
+        margin-left: -20px;
     }
     .overview_text01 {
         position: relative;
         color: #fff;
-        margin-left: 15px;
+        margin-left: 0px;
         bottom: 50px;
     }
     .overview_list .overview_img01 img {
@@ -2495,6 +2496,7 @@ input::placeholder{
     }
     .overview_list .overview_img01{
         width: 400px;
+        margin-left: 71px;
     }
     .overview_top{
         width: 400px;
@@ -2503,6 +2505,7 @@ input::placeholder{
     }
     .overview_text01{
         bottom: 76px;
+        margin-left: 90px;
     }
     .button_box {
         position: relative;
