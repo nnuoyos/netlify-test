@@ -92,7 +92,6 @@ var settings = {
             breakpoint : 768,
             settings:{
                 slideToShow:2,
-               
                 arrows: true,
                 prevArrow : $('.prev_button'),
                 nextArrow : $('.next_button'),
@@ -147,7 +146,8 @@ $(function(){
         let packageSliderId = 'package_ul' + key; //패키지 슬라이드
         let overviewSliderId ='overview_slider'+key; //오버뷰 메인 슬라이드
 
-        this.id=promotionSliderId;
+        //this.id=promotionSliderId;
+        $('#promotion_ul')[key].id = promotionSliderId;
         $('#package_ul')[key].id = packageSliderId;
         $('#overview_slider')[key].id = overviewSliderId;
 
@@ -161,11 +161,11 @@ $(function(){
             prevArrow : $('.prev_button'),
             nextArrow : $('.next_button'),
             slidesToShow: 3,
-            pauseOnHover : true, //슬라이드 이동 시 마우스호버하면 일시정지
+            pauseOnHover : true,
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true, */
+            autoplay: true,
             infinite: true,
 
             responsive: [ //반응형 웹 사이즈
@@ -185,7 +185,7 @@ $(function(){
                     breakpoint : 768,
                     settings:{
                         slideToShow:2,
-                    
+                        /* dots:false, */
                         arrows: true,
                         prevArrow : $('.prev_button'),
                         nextArrow : $('.next_button'),
@@ -199,7 +199,7 @@ $(function(){
                     breakpoint : 1200,
                     settings:{
                         slideToShow:2,
-                        
+                        /* dots: false, */
                         arrows: true,
                         prevArrow : $('.prev_button'),
                         nextArrow : $('.next_button'),
@@ -217,11 +217,11 @@ $(function(){
             prevArrow : $('.prev_button_package'),
             nextArrow : $('.next_button_package'),
             slidesToShow: 3,
-            pauseOnHover : true, //슬라이드 이동 시 마우스호버하면 일시정지
+            pauseOnHover : true, 
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true, */
+            autoplay: true,
             infinite: true,
 
             responsive: [ //반응형 웹 사이즈
@@ -234,14 +234,13 @@ $(function(){
                         slidesToShow: 1,
                         centerMode: false,
                         padding : '-20px',
-                        
                     }
                 },
                 {
                     breakpoint : 768,
                     settings:{
                         slideToShow:2,
-                    
+                        /* dots: false, */
                         arrows: true,
                         prevArrow : $('.prev_button_package'),
                         nextArrow : $('.next_button_package'),
@@ -256,6 +255,7 @@ $(function(){
                     settings:{
                         slideToShow:2,
                         arrows: true,
+                        /* dots: false, */
                         prevArrow : $('.prev_button_package'),
                         nextArrow : $('.next_button_package'),
                         slidesToShow: 3,
@@ -267,8 +267,15 @@ $(function(){
             ]
         })
         $(overviewSlider).slick({
-            prevArrow : $('.prev'),
-            nextArrow : $('.next'),
+            prevArrow : $('.prev_overview'),
+            nextArrow : $('.next_overview'),
+            slidesToShow: 1,
+            pauseOnHover : true, 
+            centerMode: true,
+            variableWidth: true,
+            padding : '-20px',
+            autoplay: true,
+            infinite: true
         })  
     })
 })

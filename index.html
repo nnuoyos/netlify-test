@@ -5,10 +5,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-        <script type="text/javascript" src="slick/slick.min.js"></script>
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="slick/slick.js"></script>
+        <!-- <script type="text/javascript" src="slick/slick.min.js"></script> -->
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://kit.fontawesome.com/fa4474c805.js" crossorigin="anonymous"></script>
@@ -337,8 +338,8 @@
                             <p>The-K호텔앤리조트를 보다 현명하게 이용하는 방법! 원하는 구성의 서비스를 최적의 가격으로 이용하실 수 있습니다.</p>
                         </div>
                         <div class="package_button">
-                            <button class="prev_button_package"><a href=""></a></button>
-                            <button class="next_button_package"><a href=""></a></button>
+                            <button class="prev_button_package"><p></p><!-- <a href=""></a> --></button>
+                            <button class="next_button_package"><p></p><!-- <a href=""></a> --></button>
                         </div>
                         <div class="package_container slider">
                             <ul class="slide_box_main03 slide_list" id="package_ul">
@@ -434,7 +435,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <ul class="slide_pagination" id="package_list">
+                        <!-- <ul class="slide_pagination" id="package_list">
                             <li class="active"><a href="">1</a></li>
                             <li><a href="">2</a></li>
                             <li><a href="">3</a></li>
@@ -444,7 +445,7 @@
                             <li><a href="">7</a></li>
                             <li><a href="">8</a></li>
                             <li><a href="">9</a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </div>
             </section>
@@ -747,10 +748,10 @@
                         </div>
                         <!-- .overview_bottom end -->
                         <div class="button_box">
-                                <button class="prev prev_button slick-prev slick-arrow">
+                                <button class="prev_overview prev_button slick-prev slick-arrow">
                                     <img src="./img/a_left.png" alt="prev button">
                                 </button>
-                                <button class="next next_button slick-next slick-arrow">
+                                <button class="next_overview next_button slick-next slick-arrow">
                                     <img src="./img/a_right.png" alt="next button">
                                 </button>
                         </div>
@@ -956,6 +957,11 @@
                 </address>
             </div>
         </footer>
+        <!-- <script type="text/javascript">$.noConflict();</script> -->
+       <!--  <script src="//code.jquery.com/jquery-1.11.2.min.js"></script> -->
+        <script type="text/javascript">
+        window.jQuery1_11_2 = jQuery.noConflict(true);
+        </script>
         <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e5032971fae4f7757d54b054f63e5627"></script>
         <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
         <script src="./main.js"></script>

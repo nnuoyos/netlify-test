@@ -1669,9 +1669,7 @@ input::placeholder{
         height: 350px;
     }
     .package_button{
-        position: absolute;
-        bottom: 15px;
-        left: 420px;
+       
     }
     .package_button::before{
         /* content: ''; */
@@ -1691,7 +1689,7 @@ input::placeholder{
         width: 60px;
         height: 60px;
     }
-    .package_button .prev_button_package a::after{
+    .package_button .prev_button_package p::after{
         content: '';
         display: inline-block;
         vertical-align: top;
@@ -1706,7 +1704,7 @@ input::placeholder{
     .package_button .next_button_package{
         position: absolute;
         border: 1px solid #b6b6b6;
-        margin-left: 10px;
+        margin-left: 71px;
         border-radius: 100%;
         cursor: pointer;
         z-index: 6;
@@ -1714,7 +1712,7 @@ input::placeholder{
         width: 60px;
         height: 60px;
     }
-    .package_button .next_button_package a::after{
+    .package_button .next_button_package p::after{
         content: '';
         display: inline-block;
         vertical-align: top;
@@ -1724,6 +1722,12 @@ input::placeholder{
         border-right: 1px solid #999;
         border-bottom: 1px solid #999;
         transform: rotate(315deg);
+    }
+    .package_button {
+        position: absolute;
+        display: flex;
+        bottom: 15px;
+        left: 420px;
     }
     /* main04 TODO */
     #main04 {
