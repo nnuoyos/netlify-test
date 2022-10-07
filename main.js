@@ -59,8 +59,8 @@ setInterval(function(){
 },4000);
 
 
-/* promotion */
-var $carousel = $('#promotion_ul');
+/* promotion slick slider */
+/* var $carousel_promo = $('#promotion_ul');
 
 var settings = {
     dots: true,
@@ -117,31 +117,161 @@ var settings = {
             }
         }
     ]
-};
+}; */
 
 function setSlideVisibility() {
   //Find the visible slides i.e. where aria-hidden="false"
-  var visibleSlides = $carousel.find('.slide_box[aria-hidden="false"]');
+/*   var visibleSlides = $carousel_promo.find('.slide_box[aria-hidden="false"]'); */
   //Make sure all of the visible slides have an opacity of 1
-  $(visibleSlides).each(function() {
+/*   $(visibleSlides).each(function() {
     $(this).css('opacity', 1);
-  });
+  }); */
 
   //Set the opacity of the first and last partial slides.
-  $(visibleSlides).first().prev().css('opacity', 0);
+/*   $(visibleSlides).first().prev().css('opacity', 0); */
 }
 
-$carousel.slick(settings);
-$carousel.slick('slickGoTo', 1);
+/* $carousel_promo.slick(settings);
+$carousel_promo.slick('slickGoTo', 1);
 setSlideVisibility();
 
-$carousel.on('afterChange', function() {
+$carousel_promo.on('afterChange', function() {
   setSlideVisibility();
-});
+}); */
 
 
+/* slick test */
+$(function(){
+    $('.slider').each(function(key,item){
+        let promotionSliderId = 'promotion_ul' + key; //프로모션 슬라이드
+        let packageSliderId = 'package_ul' + key; //패키지 슬라이드
+        let overviewSliderId ='overview_slider'+key; //오버뷰 메인 슬라이드
 
-/* test */
+        this.id=promotionSliderId;
+        $('#package_ul')[key].id = packageSliderId;
+        $('#overview_slider')[key].id = overviewSliderId;
+
+        let promotionSlider = '#' + promotionSliderId;
+        let packageSlider = '#' + packageSliderId;
+        let overviewSlider = '#' + overviewSliderId;
+
+        $(promotionSlider).slick({
+            dots: true,
+            arrows: true,
+            prevArrow : $('.prev_button'),
+            nextArrow : $('.next_button'),
+            slidesToShow: 3,
+            pauseOnHover : true, //슬라이드 이동 시 마우스호버하면 일시정지
+            centerMode: false,
+            variableWidth: true,
+            padding : '-20px',
+            /* autoplay: true, */
+            infinite: true,
+
+            responsive: [ //반응형 웹 사이즈
+                {
+                    breakpoint : 375,
+                    settings:{
+                        slideToShow:2,
+                        dots: true,
+                        arrows: true,
+                        slidesToShow: 1,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                },
+                {
+                    breakpoint : 768,
+                    settings:{
+                        slideToShow:2,
+                    
+                        arrows: true,
+                        prevArrow : $('.prev_button'),
+                        nextArrow : $('.next_button'),
+                        slidesToShow: 3,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                },
+                {
+                    breakpoint : 1200,
+                    settings:{
+                        slideToShow:2,
+                        
+                        arrows: true,
+                        prevArrow : $('.prev_button'),
+                        nextArrow : $('.next_button'),
+                        slidesToShow: 3,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                }
+            ]
+        })
+        $(packageSlider).slick({
+            dots: true,
+            arrows: true,
+            prevArrow : $('.prev_button_package'),
+            nextArrow : $('.next_button_package'),
+            slidesToShow: 3,
+            pauseOnHover : true, //슬라이드 이동 시 마우스호버하면 일시정지
+            centerMode: false,
+            variableWidth: true,
+            padding : '-20px',
+            /* autoplay: true, */
+            infinite: true,
+
+            responsive: [ //반응형 웹 사이즈
+                {
+                    breakpoint : 375,
+                    settings:{
+                        slideToShow:2,
+                        dots: true,
+                        arrows: true,
+                        slidesToShow: 1,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                },
+                {
+                    breakpoint : 768,
+                    settings:{
+                        slideToShow:2,
+                    
+                        arrows: true,
+                        prevArrow : $('.prev_button_package'),
+                        nextArrow : $('.next_button_package'),
+                        slidesToShow: 3,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                },
+                {
+                    breakpoint : 1200,
+                    settings:{
+                        slideToShow:2,
+                        arrows: true,
+                        prevArrow : $('.prev_button_package'),
+                        nextArrow : $('.next_button_package'),
+                        slidesToShow: 3,
+                        centerMode: false,
+                        padding : '-20px',
+                        
+                    }
+                }
+            ]
+        })
+        $(overviewSlider).slick({
+            prevArrow : $('.prev'),
+            nextArrow : $('.next'),
+        })  
+    })
+})
 
 
 /* let promoWrapper = document.querySelector('.promotion_container'); //최상위 요소
@@ -201,7 +331,7 @@ let slideWidthPackage  = packageWrapper.clientWidth; //promotion_container의 wi
 let paginationItemsPackage = document.querySelectorAll('#package_list > li');
 slidePackage.style.width = slideWidthPackage * maxSlidePackage + 'px';
 packageSlides(); */
-
+/* 
 function packageSlides() {
     for (let i = 0; i < maxSlidePackage; i++) {
         slidePackage.style.transition = '.3s';
@@ -214,9 +344,9 @@ function packageSlides() {
     // 슬라이드 이동 시 현재 활성화된 pagination 변경
     paginationItemsPackage.forEach((i) => i.classList.remove("active"));
     paginationItemsPackage[currSlidePackage-1].classList.add("active");
-}
+} */
 /* paging button click */
-$(function () {
+/* $(function () {
     let container = $('#package_ul');
     let pagination = $('#package_list > li');
     let pageBtn = $('#package_list > li > a');
@@ -230,7 +360,7 @@ $(function () {
         pageBtn.eq(nowIndex).parent().siblings().removeClass('active');
         container.animate({ left: -310 * nowIndex });
     });
-});
+}); */
 
 /* tab menu */
 //페이지 들어가자마자 첫번째 탭 화면 보이도록 수정하기(지리산으로 나옴)
