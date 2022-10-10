@@ -349,9 +349,9 @@ body {
 /* slick */
 .slick-slide {
     width: 290px;
-    margin-left: 20px;
+    margin-left: 15px;
 }
-.slick-dots{
+#main02 .slick-dots{
     position: absolute;
     display: flex;
     bottom: -10%;
@@ -395,10 +395,10 @@ body {
     margin:0 -20px;
 }
 .slide_box .slide_img_box {
-    width: 295px;
+    width: 290px;
     border-top: 2px solid #555555;
-    margin-left: 40px;
-   /*  margin-left: 290px; */
+    margin-left: 35px;
+   
    background-color: #fff;
    /* padding: 20px; */
    
@@ -519,7 +519,7 @@ li {
 }
 .slide_box_main03 .slide_img_box_main03 {
     border-top: 2px solid #444;
-    margin-left: 20px;
+    margin-left: 15px;
 }
 .slide_img_main03 {
     width: 100%;
@@ -543,6 +543,12 @@ li {
 .text_date_main03 {
     color: #777;
     font-size: 14px;
+}
+#main03 .slick-dots{
+    position: absolute;
+    display: flex;
+    bottom: -10%;
+    left: 20%;
 }
 .local_main03 {
     position: relative;
@@ -755,12 +761,12 @@ li {
 }
 .overview_list .overview_img01 {
     width: 375px;
-    margin-left: -20px;
+    margin-left: 0px;
 }
 .overview_text01 {
     position: relative;
     color: #fff;
-    margin-left: 0px;
+    margin-left: 15px;
     bottom: 50px;
 }
 .overview_list .overview_img01 img {
@@ -833,6 +839,11 @@ li {
 .button_box .next_button{
     margin-right: 10px;
 }
+/* slick */
+/* .slick-slide{
+    width: 375px;
+    margin-left: 0;
+} */
 /* main06 */
 #main06 {
     width: 100%;
@@ -1566,6 +1577,11 @@ input::placeholder{
     /* slick */
     .slick-slide{
         width: 290px;
+        margin-left: 15px;
+    }
+    #main02 .slick-dots{
+        display: none;
+        position: relative;
     }
     .slide_box {
         position: absolute;
@@ -1590,7 +1606,7 @@ input::placeholder{
     .slide_box .slide_img_box {
         width: 290px;
         border-top: 2px solid #555555;
-        margin-left: 23px;
+        margin-left: 32px;
         /* padding-right: 20px; */
         padding: 0;
     }
@@ -1668,8 +1684,8 @@ input::placeholder{
         position: relative;
         height: 350px;
     }
-    .package_button{
-       
+    .slide_box_main03 .slide_img_box_main03{
+        margin-left: 15px;
     }
     .package_button::before{
         /* content: ''; */
@@ -1921,16 +1937,17 @@ input::placeholder{
         position: relative;
         width: 375px;
         height: 100%;
+        margin-left: 0;
         /* overflow: hidden; */
     }
     .overview_list .overview_img01 {
         width: 300px;
-        margin-left: -20px;
+        margin-left: 0px;
     }
     .overview_text01 {
         position: relative;
         color: #fff;
-        margin-left: 0px;
+        margin-left: 15px;
         bottom: 50px;
     }
     .overview_list .overview_img01 img {
@@ -1943,10 +1960,15 @@ input::placeholder{
         width: 300px;
         height: 173px;
     }
+    /* slick */
+    /* .slick-slide{
+        width: 300px;
+        margin-left: 0;
+    }
     .slick-arrow{
         width: 50px;
         height: 50px;
-    }
+    } */
     /* overview sub photo */
     .overview_bottom{
         width: 375px;
@@ -2501,7 +2523,7 @@ input::placeholder{
     }
     .overview_list .overview_img01{
         width: 400px;
-        margin-left: 71px;
+        margin-left: 45px;
     }
     .overview_top{
         width: 400px;
@@ -2520,7 +2542,11 @@ input::placeholder{
         margin-left: 43px;
         justify-content: end;
     }
-
+    /* slick */
+    .slick-slide{
+        width: 400px;
+        margin-left: 0px;
+    }
     /* main06 */
     #main06{
         position: relative;

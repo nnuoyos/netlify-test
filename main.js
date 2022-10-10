@@ -140,20 +140,21 @@ $carousel_promo.on('afterChange', function() {
 
 
 /* slick test */
+
 $(function(){
     $('.slider').each(function(key,item){
         let promotionSliderId = 'promotion_ul' + key; //프로모션 슬라이드
         let packageSliderId = 'package_ul' + key; //패키지 슬라이드
-        let overviewSliderId ='overview_slider'+key; //오버뷰 메인 슬라이드
+        //let overviewSliderId ='overview_slider'+key; //오버뷰 메인 슬라이드
 
         //this.id=promotionSliderId;
         $('#promotion_ul')[key].id = promotionSliderId;
         $('#package_ul')[key].id = packageSliderId;
-        $('#overview_slider')[key].id = overviewSliderId;
+        //$('#overview_slider')[key].id = overviewSliderId;
 
         let promotionSlider = '#' + promotionSliderId;
         let packageSlider = '#' + packageSliderId;
-        let overviewSlider = '#' + overviewSliderId;
+        //let overviewSlider = '#' + overviewSliderId;
 
         $(promotionSlider).slick({
             dots: true,
@@ -165,8 +166,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            autoplay: true,
-            infinite: true,
+            /* autoplay: true,
+            infinite: true, */
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -211,6 +212,7 @@ $(function(){
                 }
             ]
         })
+        $('')
         $(packageSlider).slick({
             dots: true,
             arrows: true,
@@ -221,8 +223,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            autoplay: true,
-            infinite: true,
+            /* autoplay: true,
+            infinite: true, */
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -266,7 +268,7 @@ $(function(){
                 }
             ]
         })
-        $(overviewSlider).slick({
+        /* $(overviewSlider).slick({
             prevArrow : $('.prev_overview'),
             nextArrow : $('.next_overview'),
             slidesToShow: 1,
@@ -276,8 +278,9 @@ $(function(){
             padding : '-20px',
             autoplay: true,
             infinite: true
-        })  
-    })
+        })  */
+    });
+    $('.slider').not('slick-initialized').slick();
 })
 
 
@@ -372,7 +375,7 @@ function packageSlides() {
 /* tab menu */
 //페이지 들어가자마자 첫번째 탭 화면 보이도록 수정하기(지리산으로 나옴)
 
-$(function () {
+/* $(function () {
     let tabList = $('.tabs_nav li');
     let tabAnchor = $('.tabs_nav li a');
     let tabPanel = $('.tabs_panel');
@@ -393,12 +396,12 @@ $(function () {
         //유저가 보고싶은 해당 탭은 target에 저장되어 있다 show로 보여주기
         $($target).show();
     });
-});
+}); */
 
 
 /* overview slide */
 
-function slideOverview(){
+/* function slideOverview(){
     const slideList = document.querySelector('.overview_list'); //ul
     const slideContents = document.querySelectorAll('.slide_content'); //li
     const slidePrevButton = document.querySelector('.prev_button');
@@ -429,12 +432,12 @@ function slideOverview(){
             slideList.style.transform = "translate3d(-" + (slideWidth)
         }
     })
-}
+} */
 /* over view main slide */
-$('.overview_list').slick({
+/* $('.overview_list').slick({
     prevArrow : $('.prev'),
     nextArrow : $('.next'),
-});
+}); */
 
 
 
