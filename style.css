@@ -635,11 +635,11 @@ li {
     position: relative;
     padding: 2em 0em;
 }
-.tab_box .tabs_nav li a.active {
+.tab_box .tabs_nav li.active a{
     background-color: #fff;
     color: #000;
 }
-.tab_box .tabs_nav li a.active::after {
+.tab_box .tabs_nav li.active a::after {
     position: absolute;
     content: '';
     display: block;
@@ -648,7 +648,7 @@ li {
     height: 2px;
     background-color: #000;
 }
-.tab_box .tabs_nav li a.active::before {
+.tab_box .tabs_nav li.active a::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -658,7 +658,7 @@ li {
     border-right: 5px solid transparent;
     transform: rotate(180deg);
 }
-.tab_box .tabs_nav li:nth-child(3) a.active::before {
+.tab_box .tabs_nav li:nth-child(3).active a::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -1803,12 +1803,17 @@ input::placeholder{
         position: relative;
         padding: 0;
     }
-    .tab_box .tabs_nav li a.active {
+    /* .tab_box .tabs_nav li a.active {
+        font-size: 40px;
+        background-color: inherit;
+        color: #000;
+    } */
+    .tab_box .tabs_nav li.active .btn{
         font-size: 40px;
         background-color: inherit;
         color: #000;
     }
-    .tab_box .tabs_nav li a.active::after {
+    .tab_box .tabs_nav li.active a::after {
         position: relative;
         margin-left: 0px;
         content: '';
@@ -1818,7 +1823,7 @@ input::placeholder{
         height: 1px;
         background-color: #000;
     }
-    .tab_box .tabs_nav li a.active::before {
+    .tab_box .tabs_nav li.active a::before {
         position: absolute;
         content: '';
         bottom: 20px;
@@ -1840,8 +1845,9 @@ input::placeholder{
     }
     .tab_body {
         position: absolute;
-        right: 40px;
-        width: 350px;
+        right: -257px;
+        top: -34px;
+        width: 380px;
         height: 330px;
     }
     .tab_body .tab_img {
@@ -1865,13 +1871,13 @@ input::placeholder{
         position: absolute;
         top: 173px;
         height: 94px;
-        width: 100%;
+        width: 350px;
         font-size: 10px;
         letter-spacing: -0.5px;
         background-color: rgb(3, 3, 3, 0.5);
     }
     .content_inner .title {
-        margin-left: 20px;
+        margin-left: 18px;
         font-size: 20px;
         margin-bottom: 5px;
         font-weight: 400;
@@ -1879,7 +1885,7 @@ input::placeholder{
     .content_inner .hash_tag {
         margin-left: 20px;
         width: 265px;
-        font-size: 16px;
+        font-size: 14px;
     }
     /* main 05 OVER VIEW*/
     #main05 {

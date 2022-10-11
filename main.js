@@ -118,17 +118,17 @@ var settings = {
     ]
 }; */
 
-function setSlideVisibility() {
+/* function setSlideVisibility() {
   //Find the visible slides i.e. where aria-hidden="false"
-/*   var visibleSlides = $carousel_promo.find('.slide_box[aria-hidden="false"]'); */
+  var visibleSlides = $carousel_promo.find('.slide_box[aria-hidden="false"]');
   //Make sure all of the visible slides have an opacity of 1
-/*   $(visibleSlides).each(function() {
+  $(visibleSlides).each(function() {
     $(this).css('opacity', 1);
-  }); */
+  });
 
   //Set the opacity of the first and last partial slides.
-/*   $(visibleSlides).first().prev().css('opacity', 0); */
-}
+  $(visibleSlides).first().prev().css('opacity', 0);
+} */
 
 /* $carousel_promo.slick(settings);
 $carousel_promo.slick('slickGoTo', 1);
@@ -373,6 +373,32 @@ function packageSlides() {
 }); */
 
 /* tab menu */
+const tabList = document.querySelectorAll('.tab_menu .list li');
+const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
+let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+
+for(let i = 0; i < tabList.length; i++){
+tabList[i].querySelector('.btn').addEventListener('click', function(e){
+    e.preventDefault();
+    for(let j = 0; j < tabList.length; j++){
+    // 나머지 버튼 클래스 제거
+    tabList[j].classList.remove('active');
+
+    // 나머지 컨텐츠 display:none 처리
+    contents[j].style.display = 'none';
+    }
+
+    // 버튼 관련 이벤트
+    this.parentNode.classList.add('active');
+
+    // 버튼 클릭시 컨텐츠 전환
+    activeCont = this.getAttribute('href');
+    document.querySelector(activeCont).style.display = 'block';
+});
+}
+
+
+
 //페이지 들어가자마자 첫번째 탭 화면 보이도록 수정하기(지리산으로 나옴)
 
 /* $(function () {
