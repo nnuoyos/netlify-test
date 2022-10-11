@@ -2241,6 +2241,7 @@ input::placeholder{
         position: absolute;
         right: -10px;
         top: 250px;
+        z-index: 15;
     }
     .location_info img{
         width: 83%;
