@@ -166,8 +166,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true,
-            infinite: true, */
+            autoplay: true,
+            infinite: true,
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -223,8 +223,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true,
-            infinite: true, */
+            autoplay: true,
+            infinite: true,
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -268,17 +268,6 @@ $(function(){
                 }
             ]
         })
-        /* $(overviewSlider).slick({
-            prevArrow : $('.prev_overview'),
-            nextArrow : $('.next_overview'),
-            slidesToShow: 1,
-            pauseOnHover : true, 
-            centerMode: true,
-            variableWidth: true,
-            padding : '-20px',
-            autoplay: true,
-            infinite: true
-        })  */
     });
     $('.slider').not('slick-initialized').slick();
 })
@@ -376,6 +365,8 @@ function packageSlides() {
 const tabList = document.querySelectorAll('.tab_menu .list li');
 const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
 let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+document.getElementById('tab03').style.display='none';
+document.getElementById('tab02').style.display='none';
 
 for(let i = 0; i < tabList.length; i++){
 tabList[i].querySelector('.btn').addEventListener('click', function(e){

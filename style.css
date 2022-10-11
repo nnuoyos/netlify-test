@@ -49,7 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 0px;
-    background-color: #000;
+    background-color: #131313;
 }
 .layer{
     position: absolute;
@@ -637,7 +637,7 @@ li {
 }
 .tab_box .tabs_nav li.active a{
     background-color: #fff;
-    color: #000;
+    color: #131313;
 }
 .tab_box .tabs_nav li.active a::after {
     position: absolute;
@@ -646,7 +646,7 @@ li {
     width: 100%;
     top: 0px;
     height: 2px;
-    background-color: #000;
+    background-color: #131313;
 }
 .tab_box .tabs_nav li.active a::before {
     position: absolute;
@@ -1490,6 +1490,7 @@ input::placeholder{
     }
     .promotion_box {
         position: absolute;
+        top: -1px;
         width: 333px;
         height: 284px;
         background-color: rgb(251, 251, 251, 3.9);
@@ -1806,12 +1807,12 @@ input::placeholder{
     /* .tab_box .tabs_nav li a.active {
         font-size: 40px;
         background-color: inherit;
-        color: #000;
+        color: #131313;
     } */
     .tab_box .tabs_nav li.active .btn{
         font-size: 40px;
         background-color: inherit;
-        color: #000;
+        color: #131313;
     }
     .tab_box .tabs_nav li.active a::after {
         position: relative;
@@ -1821,7 +1822,7 @@ input::placeholder{
         width: 100%;
         top: 5px;
         height: 1px;
-        background-color: #000;
+        background-color: #131313;
     }
     .tab_box .tabs_nav li.active a::before {
         position: absolute;
@@ -1833,7 +1834,7 @@ input::placeholder{
         border-right: 5px solid transparent;
         transform: rotate(90deg);
     }
-    .tab_box .tabs_nav li:nth-child(3) a.active::before {
+    .tab_box .tabs_nav li:nth-child(3).active a::before {
         position: absolute;
         content: '';
         bottom: 20px;
@@ -1877,13 +1878,13 @@ input::placeholder{
         background-color: rgb(3, 3, 3, 0.5);
     }
     .content_inner .title {
-        margin-left: 18px;
+        margin-left: 3%;
         font-size: 20px;
         margin-bottom: 5px;
         font-weight: 400;
     }
     .content_inner .hash_tag {
-        margin-left: 20px;
+        margin-left: 3%;
         width: 265px;
         font-size: 14px;
     }
@@ -2384,15 +2385,15 @@ input::placeholder{
     }
     /* slick */
     .slick-list{
-        margin-left: -90px;
+        margin-left: 0px;
     }
-    .slick-dots{
+   /*  .slick-dots{
         position: absolute;
         display: flex;
         bottom: -10%;
         left: 10%;
-    }
-    .slick-dots li{
+    } */
+   /*  .slick-dots li{
         color: #7fb5ff88;
         cursor: pointer;
         font-size: 16px;
@@ -2405,8 +2406,8 @@ input::placeholder{
         cursor: pointer;
         text-indent: -9999px;
         z-index: 9;
-    }
-    .slick-dots li.slick-active{
+    } */
+/*     .slick-dots li.slick-active{
         color: #7fb5ff88;
         cursor: pointer;
         font-size: 16px;
@@ -2419,7 +2420,7 @@ input::placeholder{
         cursor: pointer;
         text-indent: -9999px;
         z-index: 9;
-    }
+    } */
     .slick-slide{
         width: 290px;
     }
@@ -2427,12 +2428,13 @@ input::placeholder{
         margin-left: 394px;
     }
     .slide_box li{
+        width: 290px;
         padding-right: 40px;
     }
     .slide_box .slide_img_box{
         width: 290px;
         border-top: 2px solid #555555;
-        margin-left: 20px;
+        margin-left: 32px;
         padding-right: 12px;
         padding: 0;
     }
@@ -2461,7 +2463,7 @@ input::placeholder{
     }
     .package_box{
         position: absolute;
-        right: 0;
+        right: -102px;
         top: -31px;
     }
     .package_box h1{
@@ -2473,7 +2475,13 @@ input::placeholder{
     .package_button{
         position: absolute;
         bottom: 15px;
-        left: 70%;
+        left: 79%;
+    }
+    .slide_box_main03{
+        margin-left: -9px;
+    }
+    .slide_box_main03 .slide_img_box_main03{
+        margin-left: 14px;
     }
     /* main04 */
     #main04{
@@ -2507,9 +2515,12 @@ input::placeholder{
         left: 175px;
     }
     .tab_body{
-        width: 54%;
+        width: 100%;
         height: 447px;
-        right: 0;
+        right: -90%;
+    }
+    .tab_body .tab_img img{
+        width: 540px;
     }
     .todo_background img{
         display: none;
@@ -2547,11 +2558,6 @@ input::placeholder{
         display: flex;
         margin-left: 43px;
         justify-content: end;
-    }
-    /* slick */
-    .slick-slide{
-        width: 400px;
-        margin-left: 0px;
     }
     /* main06 */
     #main06{
