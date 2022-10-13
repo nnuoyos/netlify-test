@@ -118,17 +118,17 @@ var settings = {
     ]
 }; */
 
-function setSlideVisibility() {
+/* function setSlideVisibility() {
   //Find the visible slides i.e. where aria-hidden="false"
-/*   var visibleSlides = $carousel_promo.find('.slide_box[aria-hidden="false"]'); */
+  var visibleSlides = $carousel_promo.find('.slide_box[aria-hidden="false"]');
   //Make sure all of the visible slides have an opacity of 1
-/*   $(visibleSlides).each(function() {
+  $(visibleSlides).each(function() {
     $(this).css('opacity', 1);
-  }); */
+  });
 
   //Set the opacity of the first and last partial slides.
-/*   $(visibleSlides).first().prev().css('opacity', 0); */
-}
+  $(visibleSlides).first().prev().css('opacity', 0);
+} */
 
 /* $carousel_promo.slick(settings);
 $carousel_promo.slick('slickGoTo', 1);
@@ -268,17 +268,6 @@ $(function(){
                 }
             ]
         })
-        /* $(overviewSlider).slick({
-            prevArrow : $('.prev_overview'),
-            nextArrow : $('.next_overview'),
-            slidesToShow: 1,
-            pauseOnHover : true, 
-            centerMode: true,
-            variableWidth: true,
-            padding : '-20px',
-            autoplay: true,
-            infinite: true
-        })  */
     });
     $('.slider').not('slick-initialized').slick();
 })
@@ -373,6 +362,34 @@ function packageSlides() {
 }); */
 
 /* tab menu */
+const tabList = document.querySelectorAll('.tab_menu .list li');
+const contents = document.querySelectorAll('.tab_menu .cont_area .cont')
+let activeCont = ''; // 현재 활성화 된 컨텐츠 (기본:#tab1 활성화)
+document.getElementById('tab03').style.display='none';
+document.getElementById('tab02').style.display='none';
+
+for(let i = 0; i < tabList.length; i++){
+tabList[i].querySelector('.btn').addEventListener('click', function(e){
+    e.preventDefault();
+    for(let j = 0; j < tabList.length; j++){
+    // 나머지 버튼 클래스 제거
+    tabList[j].classList.remove('active');
+
+    // 나머지 컨텐츠 display:none 처리
+    contents[j].style.display = 'none';
+    }
+
+    // 버튼 관련 이벤트
+    this.parentNode.classList.add('active');
+
+    // 버튼 클릭시 컨텐츠 전환
+    activeCont = this.getAttribute('href');
+    document.querySelector(activeCont).style.display = 'block';
+});
+}
+
+
+
 //페이지 들어가자마자 첫번째 탭 화면 보이도록 수정하기(지리산으로 나옴)
 
 /* $(function () {
@@ -400,39 +417,48 @@ function packageSlides() {
 
 
 /* overview slide */
+let pages = 0;//현재 인덱스 번호
+let positionValue = 0;//images 위치값
+//DOM
+const prevBtn = document.querySelector(".prev_overview")
+const nextBtn = document.querySelector(".next_overview")
+const images = document.querySelector(".overview_list") //ul
+const slide = document.querySelectorAll('.slide_content'); //li
+const length = slide.length;
+const IMAGE_WIDTH = 300;//한번 이동 시 IMAGE_WIDTH만큼 이동한다.
 
-/* function slideOverview(){
-    const slideList = document.querySelector('.overview_list'); //ul
-    const slideContents = document.querySelectorAll('.slide_content'); //li
-    const slidePrevButton = document.querySelector('.prev_button');
-    const slideNextButton = document.querySelector('.next_button');
-    const slideLength = slideContents.length; //슬라이드 전체 길이
-    const slideWidth = 375;
-    const slideSpeed = 300;
-    const startNum = 0; 
+function next() {
+    if (pages < length) {
+      prevBtn.removeAttribute('disabled')//뒤로 이동해 더이상 disabled가 아니여서 속성을 삭제한다.
+      positionValue -= IMAGE_WIDTH;//IMAGE_WIDTH의 증감을 positionValue에 저장한다.
+      images.style.transform = `translateX(${positionValue}px)`;
+          //x축으로 positionValue만큼의 px을 이동한다.
+      pages += 1; //다음 페이지로 이동해서 pages를 1증가 시킨다.
+    }
+    if (pages === length-1) { //
+      nextBtn.setAttribute('disabled', 'true')//마지막 장일 때 next버튼이 disabled된다.
+    }
+  }
+  
+  function prev() {
+    if (pages > 0) {
+      nextBtn.removeAttribute('disabled')
+      positionValue += IMAGE_WIDTH;
+      images.style.transform = `translateX(${positionValue}px)`;
+      pages -= 1; //이전 페이지로 이동해서 pages를 1감소 시킨다.
+    }
+    if (pages === 0) {
+        prevBtn.setAttribute('disabled', 'true')//마지막 장일 때 back버튼이 disabled된다.
+    }
+  }
+  
+  function init() {  //초기 화면 상태
+    prevBtn.setAttribute('disabled', 'true'); //속성이 disabled가 된다.
+    prevBtn.addEventListener("click", prev); //클릭시 다음으로 이동한다.
+    nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
+  }
+  init();
 
-    //무한 반복 슬라이드
-    slideList.style.width = slideWidth * (slideLength + 2) + "px";
-    // Copy first and last slide
-    let firstChild = slideList.firstElementChild;
-    let lastChild = slideList.lastElementChild;
-    let clonedFirst = firstChild.cloneNode(true);
-    let clonedLast = lastChild.cloneNode(true);
-    // Add copied Slides
-    slideList.appendChild(clonedFirst);
-    slideList.insertBefore(clonedLast, slideList.firstElementChild);
-
-    let curIndex = startNum; //시작 인덱스
-    let curSlide = slideContents[curIndex];
-    curSlide.classList.add('slide_active');
-    //next button event
-    slideNextButton.addEventListener('click', function(){
-        if(curIndex <= slideLength - 1){
-            slideList.style.transition = slideSpeed + "ms";
-            slideList.style.transform = "translate3d(-" + (slideWidth)
-        }
-    })
-} */
 /* over view main slide */
 /* $('.overview_list').slick({
     prevArrow : $('.prev'),

@@ -49,7 +49,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 0px;
-    background-color: #000;
+    background-color: #131313;
 }
 .layer{
     position: absolute;
@@ -635,20 +635,20 @@ li {
     position: relative;
     padding: 2em 0em;
 }
-.tab_box .tabs_nav li a.active {
+.tab_box .tabs_nav li.active a{
     background-color: #fff;
-    color: #000;
+    color: #131313;
 }
-.tab_box .tabs_nav li a.active::after {
+.tab_box .tabs_nav li.active a::after {
     position: absolute;
     content: '';
     display: block;
     width: 100%;
     top: 0px;
     height: 2px;
-    background-color: #000;
+    background-color: #131313;
 }
-.tab_box .tabs_nav li a.active::before {
+.tab_box .tabs_nav li.active a::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -658,7 +658,7 @@ li {
     border-right: 5px solid transparent;
     transform: rotate(180deg);
 }
-.tab_box .tabs_nav li:nth-child(3) a.active::before {
+.tab_box .tabs_nav li:nth-child(3).active a::before {
     position: absolute;
     content: '';
     bottom: 5px;
@@ -1490,6 +1490,8 @@ input::placeholder{
     }
     .promotion_box {
         position: absolute;
+        top: -1px;
+        left: 24px;
         width: 333px;
         height: 284px;
         background-color: rgb(251, 251, 251, 3.9);
@@ -1803,12 +1805,17 @@ input::placeholder{
         position: relative;
         padding: 0;
     }
-    .tab_box .tabs_nav li a.active {
+    /* .tab_box .tabs_nav li a.active {
         font-size: 40px;
         background-color: inherit;
-        color: #000;
+        color: #131313;
+    } */
+    .tab_box .tabs_nav li.active .btn{
+        font-size: 40px;
+        background-color: inherit;
+        color: #131313;
     }
-    .tab_box .tabs_nav li a.active::after {
+    .tab_box .tabs_nav li.active a::after {
         position: relative;
         margin-left: 0px;
         content: '';
@@ -1816,9 +1823,9 @@ input::placeholder{
         width: 100%;
         top: 5px;
         height: 1px;
-        background-color: #000;
+        background-color: #131313;
     }
-    .tab_box .tabs_nav li a.active::before {
+    .tab_box .tabs_nav li.active a::before {
         position: absolute;
         content: '';
         bottom: 20px;
@@ -1828,7 +1835,7 @@ input::placeholder{
         border-right: 5px solid transparent;
         transform: rotate(90deg);
     }
-    .tab_box .tabs_nav li:nth-child(3) a.active::before {
+    .tab_box .tabs_nav li:nth-child(3).active a::before {
         position: absolute;
         content: '';
         bottom: 20px;
@@ -1840,8 +1847,9 @@ input::placeholder{
     }
     .tab_body {
         position: absolute;
-        right: 40px;
-        width: 350px;
+        right: -257px;
+        top: -34px;
+        width: 380px;
         height: 330px;
     }
     .tab_body .tab_img {
@@ -1865,21 +1873,21 @@ input::placeholder{
         position: absolute;
         top: 173px;
         height: 94px;
-        width: 100%;
+        width: 350px;
         font-size: 10px;
         letter-spacing: -0.5px;
         background-color: rgb(3, 3, 3, 0.5);
     }
     .content_inner .title {
-        margin-left: 20px;
+        margin-left: 3%;
         font-size: 20px;
         margin-bottom: 5px;
         font-weight: 400;
     }
     .content_inner .hash_tag {
-        margin-left: 20px;
+        margin-left: 3%;
         width: 265px;
-        font-size: 16px;
+        font-size: 14px;
     }
     /* main 05 OVER VIEW*/
     #main05 {
@@ -1924,6 +1932,7 @@ input::placeholder{
     .overview_main .overview_list {
         display: flex;
         height: 216px;
+        transition: transform 0.5s;
     }
     .overview_main p{
         font-size: 12px;
@@ -1938,6 +1947,7 @@ input::placeholder{
         width: 375px;
         height: 100%;
         margin-left: 0;
+        
         /* overflow: hidden; */
     }
     .overview_list .overview_img01 {
@@ -1960,15 +1970,6 @@ input::placeholder{
         width: 300px;
         height: 173px;
     }
-    /* slick */
-    /* .slick-slide{
-        width: 300px;
-        margin-left: 0;
-    }
-    .slick-arrow{
-        width: 50px;
-        height: 50px;
-    } */
     /* overview sub photo */
     .overview_bottom{
         width: 375px;
@@ -2083,23 +2084,35 @@ input::placeholder{
     /* over view button */
     .button_box{
         position: relative;
-        bottom: -28px;
+        bottom: -25px;
         display: flex;
         justify-content: end;
         width: 100%;
     }
+    /* button{
+        width: 30px; height: 30px;
+        border-radius: 50%;
+        color: white;
+        background: #646464;
+    }
+    button:active{
+        background:#3e3e3e;
+    }
+    button:disabled{
+        background: #cbcaca;
+    } */
     .button_box img{
         width: 50px;
         height: 50px;
     }
-    .button_box .prev_button{
+    .button_box .prev_overview{
         position: absolute;
         right: 252px;
         bottom: 0px;
     }
-    .button_box .next_button{
+    .button_box .next_overview{
         position: absolute;
-        right: 188px;
+        right: 198px;
         bottom: 0px;
     }
     /* #main 06 */
@@ -2234,6 +2247,7 @@ input::placeholder{
         position: absolute;
         right: -10px;
         top: 250px;
+        z-index: 15;
     }
     .location_info img{
         width: 83%;
@@ -2377,16 +2391,16 @@ input::placeholder{
         overflow: hidden;
     }
     /* slick */
-    .slick-list{
-        margin-left: -90px;
+    .slide_box .slick-list {
+        margin:0 5px;
     }
-    .slick-dots{
+   /*  .slick-dots{
         position: absolute;
         display: flex;
         bottom: -10%;
         left: 10%;
-    }
-    .slick-dots li{
+    } */
+   /*  .slick-dots li{
         color: #7fb5ff88;
         cursor: pointer;
         font-size: 16px;
@@ -2399,8 +2413,8 @@ input::placeholder{
         cursor: pointer;
         text-indent: -9999px;
         z-index: 9;
-    }
-    .slick-dots li.slick-active{
+    } */
+/*     .slick-dots li.slick-active{
         color: #7fb5ff88;
         cursor: pointer;
         font-size: 16px;
@@ -2413,7 +2427,7 @@ input::placeholder{
         cursor: pointer;
         text-indent: -9999px;
         z-index: 9;
-    }
+    } */
     .slick-slide{
         width: 290px;
     }
@@ -2421,12 +2435,13 @@ input::placeholder{
         margin-left: 394px;
     }
     .slide_box li{
+        width: 290px;
         padding-right: 40px;
     }
     .slide_box .slide_img_box{
         width: 290px;
         border-top: 2px solid #555555;
-        margin-left: 20px;
+        margin-left: 32px;
         padding-right: 12px;
         padding: 0;
     }
@@ -2455,7 +2470,7 @@ input::placeholder{
     }
     .package_box{
         position: absolute;
-        right: 0;
+        right: -102px;
         top: -31px;
     }
     .package_box h1{
@@ -2467,7 +2482,13 @@ input::placeholder{
     .package_button{
         position: absolute;
         bottom: 15px;
-        left: 70%;
+        left: 79%;
+    }
+    .slide_box_main03{
+        margin-left: -9px;
+    }
+    .slide_box_main03 .slide_img_box_main03{
+        margin-left: 14px;
     }
     /* main04 */
     #main04{
@@ -2501,9 +2522,12 @@ input::placeholder{
         left: 175px;
     }
     .tab_body{
-        width: 54%;
+        width: 100%;
         height: 447px;
-        right: 0;
+        right: -90%;
+    }
+    .tab_body .tab_img img{
+        width: 540px;
     }
     .todo_background img{
         display: none;
@@ -2523,7 +2547,7 @@ input::placeholder{
     }
     .overview_list .overview_img01{
         width: 400px;
-        margin-left: 45px;
+        margin-left: 0px;
     }
     .overview_top{
         width: 400px;
@@ -2532,7 +2556,7 @@ input::placeholder{
     }
     .overview_text01{
         bottom: 76px;
-        margin-left: 90px;
+        margin-left: 24px;
     }
     .button_box {
         position: relative;
@@ -2541,11 +2565,6 @@ input::placeholder{
         display: flex;
         margin-left: 43px;
         justify-content: end;
-    }
-    /* slick */
-    .slick-slide{
-        width: 400px;
-        margin-left: 0px;
     }
     /* main06 */
     #main06{
@@ -2619,5 +2638,10 @@ input::placeholder{
     .footer_logo02 img{
         width: 15%;
         margin-bottom: 20px;
+    }
+}
+@media all and (min-width: 1800px) {
+    .package_button{
+        left: 85%;
     }
 }

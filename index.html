@@ -6,12 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
         <!-- <script src="http://code.jquery.com/jquery-latest.js"></script> -->
-        <script type="text/javascript">
+        <!-- <script type="text/javascript">
             jQuery.noConflict();
             jQuery(document).ready(function($){
                 ///AAA
             });
-        </script>
+        </script> -->
         <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js" integrity="sha512-WNZwVebQjhSxEzwbettGuQgWxbpYdoLf7mH+25A7sfQbbxKeS5SQ9QBf97zOY4nOlwtksgDA/czSTmfj4DUEiQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="https://kit.fontawesome.com/fa4474c805.js" crossorigin="anonymous"></script>
@@ -456,46 +456,46 @@
                 <div class="main04_inner">
                     <div class="todo_background"><img src="./img/todo_bg.jpg" alt="todo_background"></div>
                     <h1 class="todo_title"></h1>
-                    <div class="tab_warp">
-                        <div class="tab_box">
-                            <ul class="tabs_nav">
+                    <div class="tab_warp warp">
+                        <div class="tab_box tab_menu">
+                            <ul class="tabs_nav list">
                                 <li class="active"><a href="#tab01" class="btn">서울</a></li>
                                 <li><a href="#tab02" class="btn">경주</a></li>
                                 <li><a href="#tab03" class="btn">지리산</a></li>
                             </ul>
-                        </div>
-                        <!-- .tab_box end -->
-                        <div class="tab_body">
-                            <div class="tabs_panel" id="tab01">
-                                <div class="tab_img">
-                                    <img src="./img/todo_01.jpg" alt="성공적인비지니스" />
-                                </div>
-                                <div class="content">
-                                    <div class="content_inner">
-                                        <h3 class="title">성공적인 비즈니스</h3>
-                                        <p class="hash_tag">#MICE행사 #만찬 #연회행사 #의미있는 만남</p>
+                            <!-- .tab_box end -->
+                            <div class="tab_body cont_area">
+                                <div class="tabs_panel cont" id="tab01" style="display:block;">
+                                    <div class="tab_img">
+                                        <img src="./img/todo_01.jpg" alt="성공적인비지니스" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="content_inner">
+                                            <h3 class="title">성공적인 비즈니스</h3>
+                                            <p class="hash_tag">#MICE행사 #만찬 #연회행사 #의미있는 만남</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tabs_panel" id="tab02">
-                                <div class="tab_img">
-                                    <img src="./img/todo_02.jpg" alt="문화와 역사가 숨쉬는 경주로 떠나는 수학여행" />
-                                </div>
-                                <div class="content">
-                                    <div class="content_inner">
-                                        <h3 class="title">문화와 역사가 숨쉬는 경주로 떠나는 수학여행</h3>
-                                        <p class="hash_tag">#보문관광단지 #동궁과 월지 #첨성대 #불국사</p>
+                                <div class="tabs_panel cont" id="tab02">
+                                    <div class="tab_img">
+                                        <img src="./img/todo_02.jpg" alt="문화와 역사가 숨쉬는 경주로 떠나는 수학여행" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="content_inner">
+                                            <h3 class="title">문화와 역사가 숨쉬는 경주로 떠나는 수학여행</h3>
+                                            <p class="hash_tag">#보문관광단지 #동궁과 월지 #첨성대 #불국사</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="tabs_panel" id="tab03">
-                                <div class="tab_img">
-                                    <img src="./img/todo_03.jpg" alt="노고단 풍광 속에서 함께하는 특별한 단체여행" />
-                                </div>
-                                <div class="content">
-                                    <div class="content_inner">
-                                        <h3 class="title">노고단 풍광 속에서 함께하는 특별한 단체여행</h3>
-                                        <p class="hash_tag">#38평 객실 #중소연회장 #휴스테이 힐링 이벤트</p>
+                                <div class="tabs_panel cont" id="tab03">
+                                    <div class="tab_img">
+                                        <img src="./img/todo_03.jpg" alt="노고단 풍광 속에서 함께하는 특별한 단체여행" />
+                                    </div>
+                                    <div class="content">
+                                        <div class="content_inner">
+                                            <h3 class="title">노고단 풍광 속에서 함께하는 특별한 단체여행</h3>
+                                            <p class="hash_tag">#38평 객실 #중소연회장 #휴스테이 힐링 이벤트</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -515,8 +515,7 @@
                     </div>
                     <div class="overview_main">
                         <div class="overview_top main">
-                            <div class="overview_button">
-                        </div>
+                            <!-- <div class="overview_button"></div> -->
                             <ul class="overview_list" id="overview_slider">
                                 <li class="overview_item01 slide_content">
                                     <div class="overview_img01">
@@ -558,7 +557,7 @@
                         </div>    
                         <div class="overview_bottom">
                             <ul class="overview_list02 sub01">
-                                <li class="overview01_item02 slide_content">
+                                <li class="overview01_item02">
                                     <div class="overview_img02">
                                         <a href="#"><img src="./img/overview_sub1_01.jpg" alt="The-K호텔경주 한식당 무궁화" /></a>
                                     </div>
@@ -567,7 +566,7 @@
                                         <h3>한식당 무궁화</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item02 slide_content">
+                                <li class="overview01_item02">
                                     <div class="overview_img02">
                                         <a href="#"><img src="./img/overview_sub1_02.jpg" alt="The-K지리산가족호텔 20평형 객실" /></a>
                                     </div>
@@ -576,7 +575,7 @@
                                         <h3>20평형 객실</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item02 slide_content">
+                                <li class="overview01_item02">
                                     <div class="overview_img02">
                                         <a href="#"><img src="./img/overview_sub1_03.jpg" alt="The-K호텔서울 크리스탈블룸 웨딩홀" /></a>
                                     </div>
@@ -585,7 +584,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item02 slide_content">
+                                <li class="overview01_item02">
                                     <div class="overview_img02">
                                         <a href="#"><img src="./img/overview_sub1_04.jpg" alt="The-K설악산가족호텔 비즈니스룸" /></a>
                                     </div>
@@ -596,7 +595,7 @@
                                 </li>
                             </ul>
                             <ul class="overview_list03 sub02">
-                                <li class="overview01_item03 slide_content">
+                                <li class="overview01_item03">
                                     <div class="overview_img03">
                                         <a href="#"><img src="./img/overview_sub2_01.jpg" alt="" /></a>
                                     </div>
@@ -605,7 +604,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item03 slide_content">
+                                <li class="overview01_item03">
                                     <div class="overview_img03">
                                         <a href="#"><img src="./img/overview_sub2_02.jpg" alt="" /></a>
                                     </div>
@@ -614,7 +613,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item03 slide_content">
+                                <li class="overview01_item03">
                                     <div class="overview_img03">
                                         <a href="#"><img src="./img/overview_sub2_03.jpg" alt="The-K호텔경주 온돌 패밀리 룸" /></a>
                                     </div>
@@ -623,7 +622,7 @@
                                         <h3>온돌 패밀리 룸</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item03 slide_content">
+                                <li class="overview01_item03">
                                     <div class="overview_img03">
                                         <a href="#"><img src="./img/overview_sub2_04.jpg" alt="The-K지리산가족호텔 지리산 둘레길" /></a>
                                     </div>
@@ -634,7 +633,7 @@
                                 </li>
                             </ul>
                             <ul class="overview_list04 sub03">
-                                <li class="overview01_item04 slide_content">
+                                <li class="overview01_item04">
                                     <div class="overview_img04">
                                         <a href="#"><img src="./img/overview_sub3_01.jpg" alt="The-K호텔서울 본관 로비" /></a>
                                     </div>
@@ -643,7 +642,7 @@
                                         <h3>본관 로비</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item04 slide_content">
+                                <li class="overview01_item04">
                                     <div class="overview_img04">
                                         <a href="#"><img src="./img/overview_sub3_02.jpg" alt="The-K호텔서울 그랜드볼룸" /></a>
                                     </div>
@@ -652,7 +651,7 @@
                                         <h3>그랜드볼룸</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item04 slide_content">
+                                <li class="overview01_item04">
                                     <div class="overview_img04">
                                         <a href="#"><img src="./img/overview_sub3_03.jpg" alt="" /></a>
                                     </div>
@@ -661,7 +660,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item04 slide_content">
+                                <li class="overview01_item04">
                                     <div class="overview_img04">
                                         <a href="#"><img src="./img/overview_sub3_04.jpg" alt="" /></a>
                                     </div>
@@ -672,7 +671,7 @@
                                 </li>
                             </ul>
                             <ul class="overview_list05 sub04">
-                                <li class="overview01_item05 slide_content">
+                                <li class="overview01_item05">
                                     <div class="overview_img05">
                                         <a href="#"><img src="./img/overview_sub4_01.jpg" alt="" /></a>
                                     </div>
@@ -681,7 +680,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item05 slide_content">
+                                <li class="overview01_item05">
                                     <div class="overview_img05">
                                         <a href="#"><img src="./img/overview_sub4_02.jpg" alt="" /></a>
                                     </div>
@@ -690,7 +689,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item05 slide_content">
+                                <li class="overview01_item05">
                                     <div class="overview_img05">
                                         <a href="#"><img src="./img/overview_sub4_03.jpg" alt="The-K설악산가족호텔 야외 바비큐장" /></a>
                                     </div>
@@ -699,7 +698,7 @@
                                         <h3>야외 바비큐장</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item05 slide_content">
+                                <li class="overview01_item05">
                                     <div class="overview_img05">
                                         <a href="#"><img src="./img/overview_sub4_04.jpg" alt="" /></a>
                                     </div>
@@ -710,7 +709,7 @@
                                 </li>
                             </ul>
                             <ul class="overview_list06 sub05">
-                                <li class="overview01_item06 slide_content">
+                                <li class="overview01_item06">
                                     <div class="overview_img06">
                                         <a href="#"><img src="./img/overview_sub5_01.jpg" alt="The-K설악산가족호텔 20평형 객실" /></a>
                                     </div>
@@ -719,7 +718,7 @@
                                         <h3>20평형 객실</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item06 slide_content">
+                                <li class="overview01_item06">
                                     <div class="overview_img06">
                                         <a href="#"><img src="./img/overview_sub5_02.jpg" alt="The-K호텔경주 온천사우나" /></a>
                                     </div>
@@ -728,7 +727,7 @@
                                         <h3>온천사우나</h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item06 slide_content">
+                                <li class="overview01_item06">
                                     <div class="overview_img06">
                                         <a href="#"><img src="./img/overview_sub5_03.jpg" alt="" /></a>
                                     </div>
@@ -737,7 +736,7 @@
                                         <h3></h3>
                                     </div>
                                 </li>
-                                <li class="overview01_item06 slide_content">
+                                <li class="overview01_item06">
                                     <div class="overview_img06">
                                         <a href="#"><img src="./img/overview_sub5_04.jpg" alt="The-K호텔서울 레스토랑 우첼로" /></a>
                                     </div>
@@ -750,12 +749,12 @@
                         </div>
                         <!-- .overview_bottom end -->
                         <div class="button_box">
-                                <button class="prev_overview prev_button slick-prev slick-arrow">
-                                    <img src="./img/a_left.png" alt="prev button">
-                                </button>
-                                <button class="next_overview next_button slick-next slick-arrow">
-                                    <img src="./img/a_right.png" alt="next button">
-                                </button>
+                            <button class="prev_overview">
+                                <img src="./img/a_left.png" alt="prev button">
+                            </button>
+                            <button class="next_overview">
+                                <img src="./img/a_right.png" alt="next button">
+                            </button>
                         </div>
                     </div>
                     <!-- .overview_main end-->
