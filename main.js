@@ -166,8 +166,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true,
-            infinite: true, */
+            autoplay: true,
+            infinite: true,
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -223,8 +223,8 @@ $(function(){
             centerMode: false,
             variableWidth: true,
             padding : '-20px',
-            /* autoplay: true,
-            infinite: true, */
+            autoplay: true,
+            infinite: true,
 
             responsive: [ //반응형 웹 사이즈
                 {
@@ -425,7 +425,7 @@ const nextBtn = document.querySelector(".next_overview")
 const images = document.querySelector(".overview_list") //ul
 const slide = document.querySelectorAll('.slide_content'); //li
 const length = slide.length;
-const IMAGE_WIDTH = 300;//한번 이동 시 IMAGE_WIDTH만큼 이동한다.
+const IMAGE_WIDTH = 318;//한번 이동 시 (slide image width + margin-right) 값 만큼 이동한다.
 
 function next() {
     if (pages < length) {
@@ -458,13 +458,6 @@ function next() {
     nextBtn.addEventListener("click", next);//클릭시 이전으로 이동한다.
   }
   init();
-
-/* over view main slide */
-/* $('.overview_list').slick({
-    prevArrow : $('.prev'),
-    nextArrow : $('.next'),
-}); */
-
 
 
 /* LOCATION drop down menu */

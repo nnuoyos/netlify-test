@@ -1491,7 +1491,10 @@ input::placeholder{
     .promotion_box {
         position: absolute;
         top: -1px;
+<<<<<<< HEAD
         left: 24px;
+=======
+>>>>>>> 535111c6793b1802e40d7ee95c9a4b516c991645
         width: 333px;
         height: 284px;
         background-color: rgb(251, 251, 251, 3.9);
@@ -1953,6 +1956,7 @@ input::placeholder{
     .overview_list .overview_img01 {
         width: 300px;
         margin-left: 0px;
+        margin-right: 18px;
     }
     .overview_text01 {
         position: relative;
@@ -2086,8 +2090,20 @@ input::placeholder{
         position: relative;
         bottom: -25px;
         display: flex;
-        justify-content: end;
+        justify-content: space-between;
         width: 100%;
+    }
+    .button_box button{
+        width: 50px;
+        height: 50px;
+        color: white;
+        background: #6d6c6c;
+    }
+    .button_box button:active{
+        background:#3e3e3e;
+    }
+    .button_box button:disabled{
+        background: #cbcaca;
     }
     /* button{
         width: 30px; height: 30px;
@@ -2107,7 +2123,7 @@ input::placeholder{
     }
     .button_box .prev_overview{
         position: absolute;
-        right: 252px;
+        right: 250px;
         bottom: 0px;
     }
     .button_box .next_overview{
@@ -2640,8 +2656,8 @@ input::placeholder{
         margin-bottom: 20px;
     }
 }
-@media all and (min-width: 1800px) {
+/* @media all and (min-width: 1800px) {
     .package_button{
         left: 85%;
     }
-}
+} */
