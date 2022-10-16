@@ -375,21 +375,19 @@ body {
     color: #7fb5ff88;
     cursor: pointer;
     font-size: 16px;
-    width: 15px;
+    width: 30px;
     height: 15px;
-    border-radius: 50%;
+    border-radius: 25px;
     margin-top: 10px;
     margin: 0 5px;
     background-color: rgba(21, 41, 59, 0.849);
     cursor: pointer;
     text-indent: -9999px;
     z-index: 9;
+    transition: all 0.3s;
 }
 .slick-list {
     width: 5720px;
-    /* padding-left: 0px!important; */ /* half partial */
-    /* padding: 0 30px 0 0;
-    margin: 0 -30px;  */
 }
 .slide_box .slick-list {
     margin:0 -20px;
@@ -398,10 +396,7 @@ body {
     width: 290px;
     border-top: 2px solid #555555;
     margin-left: 35px;
-   
-   background-color: #fff;
-   /* padding: 20px; */
-   
+    background-color: #fff;  
 }
 .slide_img {
     width: 290px;
@@ -1001,6 +996,9 @@ li {
     color: #fff;
     margin-left: 10px;
 }
+.hover_overview{
+    display: none;
+}
 /* main07 */
 #main07 {
     width: 100%;
@@ -1527,14 +1525,6 @@ input::placeholder{
         bottom: 15px;
         left: 240px;
     }
-/*     .promotion_button::before{
-        content: '';
-        display: inline-block;
-        width: 10px;
-        height: 10px;
-        border-bottom: 2px solid #b6b6b6;
-        box-sizing: border-box;
-    } */
     .promotion_button .prev_button{
         position: relative;
         border: 1px solid #b6b6b6;
@@ -1595,6 +1585,10 @@ input::placeholder{
         flex-wrap: nowrap;
         margin-left: 390px;
     }
+    .slick-dots li.slick-active > button{
+        width: 8px;
+        height: 8px;
+    }
     .slide_img {
         height: auto;
     }
@@ -1612,7 +1606,6 @@ input::placeholder{
         width: 290px;
         border-top: 2px solid #555555;
         margin-left: 32px;
-        /* padding-right: 20px; */
         padding: 0;
     }
     .text_title {
@@ -1808,11 +1801,6 @@ input::placeholder{
         position: relative;
         padding: 0;
     }
-    /* .tab_box .tabs_nav li a.active {
-        font-size: 40px;
-        background-color: inherit;
-        color: #131313;
-    } */
     .tab_box .tabs_nav li.active .btn{
         font-size: 40px;
         background-color: inherit;
@@ -1896,7 +1884,6 @@ input::placeholder{
     #main05 {
         width: 768px;
         height: 600px;
-        /* background-color: yellowgreen; */
         margin-bottom: 50px;
     }
     .main05_inner {
@@ -1929,12 +1916,10 @@ input::placeholder{
         position: relative;
         width: 768px;
         height: 500px;
-        /* background-color: yellow; */
     }
     /* overview main photo */
     .overview_main .overview_list {
         display: flex;
-        /* height: 216px; */
         transition: transform 0.5s;
     }
     .overview_main p{
@@ -1950,8 +1935,6 @@ input::placeholder{
         width: 375px;
         height: 100%;
         margin-left: 0;
-        
-        /* overflow: hidden; */
     }
     .overview_list .overview_img01 {
         width: 375px;
@@ -2135,6 +2118,12 @@ input::placeholder{
         height: 890px;
         margin-top: 50px;
     }
+    .main06_inner{
+        width: 96%;
+    }
+    .hover_overview{
+        display: block;
+    }
     .about_thek, .hotel_resort{
         display: block;
         font-size: 50px;
@@ -2146,13 +2135,7 @@ input::placeholder{
         font-family: 'Poppins', sans-serif;
         font-size: 50px;
     }
-    .banner_box{
-        /* position: relative; */
-    }
     .banner_list{
-        /* position: relative; */
-       /*  width: 746px;
-        height: 300px; */
         display: flex;
         margin: 0 auto;
     }
@@ -2162,7 +2145,6 @@ input::placeholder{
         height: 300px;
         margin: 0px 5px;
     }
-
     .about_img01{
         position: relative;
         width: 100%;
@@ -2226,34 +2208,60 @@ input::placeholder{
         position: relative;
         font-size: 32px;
         font-weight: 400;
-        margin-top: -28%;
+        margin-top: 20%;
         margin-left: 29px;
         transition: all 0.4s;
     }
     .banner_item:hover .banner_local{
-        top: -90px;
+        top: -150px;
     }
     .banner_list li:nth-child(3) .banner_local{
-        margin-top: -25%;
+        margin-top: 16%;
         margin-left: 17px;
     }
     .banner_list li:nth-child(3):hover .banner_local{
-        top: -100px;
+        top: -200px;
     }
-    .banner_list figure{
+    .banner_list li:hover .hover_overview{
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+    .banner_list li:hover .about{
+        transform: scale(1.4);
+    }
+    .hover_overview{
         position: absolute;
+        display: table;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        opacity: 0;
+        text-align: center;
+        background-color: rgba(33, 36, 167, 0.8);
+    }
+    .hover_text{
+        font-size: 18px;
+        line-height: 34px;
+        
+        color: #fff;
+        transform: translateY(100%);
+    }
+ /*    .banner_list figure{
+        position: relative;
         width: 100%; 
         height: 100%;
     }
     .banner_list figcaption{
-        position: absolute;
+        position: relative;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        opacity: 0;
+        opacity: 1;
         transition: 0.5s;
-        background-color: rgba(0,0,0,0.65);
+        background-color: rgba(0,0,0,0.6);
         color: #fff;
         text-align: center;
     }
@@ -2270,8 +2278,8 @@ input::placeholder{
     }
     .banner_list li:hover figcaption, .banner_list li:focus figcaption{
         opacity: 1;
-        /* transition: 0.5s; */
-    }
+        transition: 0.5s;
+    } */
 
     /* #main 07 */
     #main07{
@@ -2580,7 +2588,7 @@ input::placeholder{
         width: 375px;
         height: 231px;
         right: -116px;
-        bottom: 0;
+        bottom: -14px;
         overflow: hidden;
     }
     .overview_text01{
@@ -2590,7 +2598,7 @@ input::placeholder{
     .button_box {
         position: relative;
         width: 100%;
-        bottom: 35px;
+        bottom: 21px;
         display: flex;
         margin-left: 41px;
         justify-content: end;
@@ -2605,6 +2613,9 @@ input::placeholder{
         width: 80%;
     }
     .banner_box{
+        width: 100%;
+    }
+    .banner_list li{
         width: 100%;
     }
     /* main07 */

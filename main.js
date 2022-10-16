@@ -1,5 +1,4 @@
 /* header 모바일 상단 toggle button */
-//변수 지정
 const toggleBtn = document.querySelector('.navbar_toggle_button');
 const menu = document.querySelector('.navbar_menu');
 const language = document.querySelector('.navbar_language');
@@ -25,8 +24,7 @@ $('.close_button').click(function(){
     $('.hotel_search_container').slideToggle();
 })
 
-/* main01 slide 옆으로 넘어가는 슬라이드*/
-//변수 지정
+/* main01 옆으로 넘어가는 슬라이드*/
 let sliderWrapper = document.querySelector('.container'); //최상위 요소 div
 let sliderContainer = document.querySelector('#slide'); //ul
 let slides = document.querySelectorAll('.main_slide'); //li
@@ -202,41 +200,6 @@ tabList[i].querySelector('.btn').addEventListener('click', function(e){
 }
 
 /* overview slide */
-/* window.onload = function(){
-    const overviewWrap = document.querySelector('.overview_top main'); //최상위 div 
-    const slider = document.querySelector(".overview_list"); //ul
-    const slide = document.querySelectorAll('.slide_content'); //li
-    const moveButton = querySelectorAll('.button box');
-
-    //ul 넓이 계산
-    const liWidth = slide[0].clientWidth;
-    const sliderWidth = liWidth * slide.length;
-    slider.style.width = `${sliderWidth}px`;
-    //리스너
-    let currentIdx = 0; //슬라이드 현재 번호 
-    let translate = 0; //슬라이드 위치 값
-    moveButton.addEventListener('click', moveSlide);
-
-    function moveSlide(event){
-        event.preventDefault();
-        if(event.target.className === 'next_overview'){
-            if(currentIdx !== slide.length -1){
-                translate -= liWidth;
-                slider.style.transform = `translateX(${translate}px)`;
-                currentIdx += 1;
-            }
-        }else if (event.target.className === 'prev_overview'){
-            if(currentIdx !==0){
-                translate += liWidth;
-                slider.style.transform = `translateX(${translate}px)`;
-                currentIdx -= 1;
-            }
-        }
-    }
-} */
-
-
-
 
 let sliderContainerWrap = document.querySelector('.overview_top main'); //최상위 div 
 let slideList = document.querySelector(".overview_list"); //ul
@@ -246,10 +209,7 @@ let positionValue = 0;//images 위치값
 let slideLength = slide.length; //슬라이드 li의 길이 0~3
 let prevBtn = document.querySelector(".prev_overview");
 let nextBtn = document.querySelector(".next_overview");
-/* let sliderTotalWidth = sliderContainerWrap.clientWidth; //최상위 요소의 길이 
-slideList.style.width = sliderTotalWidth * slideLength +'px'; */
 let IMAGE_WIDTH = 375;
-/* let IMAGE_WIDTH = slide.clientWidth; */
 
 function next() {
     if (pagesIndex < slideLength) {
@@ -294,7 +254,6 @@ function onClickSelect(e) {
       e.currentTarget.className = "select active";
     }
   }
-  
   document.querySelector(".select").addEventListener("click", onClickSelect);
   
   //클릭한 option을 선택창에 띄우기
